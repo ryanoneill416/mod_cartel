@@ -27,7 +27,7 @@ class Build(models.Model):
 
     def __str__(self):
         """ Generates string title """
-        return f"{self.member}'s {self.make_and_model}"
+        return f"{self.member}'s {self.make} {self.model}"
 
     def number_of_likes(self):
         """ Counts number of likes on build """
