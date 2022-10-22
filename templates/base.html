@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Mod Cartel | Build, Inspire, Connect. A welcoming space for car enthusiasts to connect and inspire others.">
-    <title>Mod.Cartel</title>
+    <title>MOD.CARTEL</title>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/c11f73347e.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -25,7 +25,44 @@
 <body>
 
     <!-- Nav pending -->
-
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Mod.Cartel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link" aria-current="page" aria-label="Go to the home page">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link" aria-current="page" aria-label="Go to the home page">
+                            Events*
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link" aria-current="page" aria-label="Go to the home page">
+                            Showcase
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link" aria-current="page" aria-label="Go to the home page">
+                            My Garage(Member)
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Register | Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     {% block content %}
     <!-- Content from the pages extending from this template -->
     {% endblock content %}
