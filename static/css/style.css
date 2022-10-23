@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .nav-logo {
     width: 240px;
     height: 80px;
@@ -7,6 +11,31 @@
     background-color: #070606;
 }
 
-ul {
-    font-size: 1.15rem;
+
+.navbar-nav li {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.75rem;
+    letter-spacing: .5px;
+    color: #FBFAF5;
+}
+
+/* Customizing Bootstrap Nav CSS */
+.navbar-nav {
+    --bs-nav-link-color: #FBFAF5;
+    --bs-nav-link-hover-color: #d383f8;
+}
+
+.navbar-toggler:focus {
+    box-shadow: rgb(211 131 248 / 25%) 0px 54px 55px, 
+    rgb(211 131 248 / 12%) 0px -12px 30px, 
+    rgb(211 131 248 / 12%) 0px 4px 6px, 
+    rgb(211 131 248 / 17%) 0px 12px 13px, 
+    rgb(211 131 248 / 9%) 0px -3px 5px;
+}
+
+.navbar-toggler {
+    font-size: 2rem;
+    color: #FBFAF5;
+    background-color: transparent;
+    border: none;
 }
