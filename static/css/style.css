@@ -1,7 +1,14 @@
+/* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #532568;
+}
+
+/* Navigation Styling */
 .nav-logo {
     width: 240px;
     height: 80px;
@@ -19,7 +26,6 @@ body {
     color: #FBFAF5;
 }
 
-/* Customizing Bootstrap Nav CSS */
 .nav-link:hover {
     color: #d383f8;
 }
@@ -37,4 +43,20 @@ body {
     color: #FBFAF5;
     background-color: transparent;
     border: none;
+}
+
+/* Footer Styling */
+.foot-logo {
+    width: 240px;
+    height: 80px;
+}
+
+footer i {
+    font-size: 2rem;
+    color: #d383f8;
+    transition: 0.35s;
+}
+
+footer i:hover {
+    color: #7d0ab3;
 }
