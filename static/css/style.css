@@ -45,6 +45,19 @@ a {
     color: #FBFAF5;
 }
 
+.login-link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+    color: #FBFAF5;
+    opacity: 0.75;
+}
+
+.login-link:hover {
+    color: #FBFAF5;
+    opacity: 1;
+}
+
 .nav-divider {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;

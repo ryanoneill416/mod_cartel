@@ -54,15 +54,25 @@
                         </a>
                     </li>
                 </ul>
+                {% if user.is_authenticated %}
                 <ul class="navbar-nav mb-2 mb-md-0">
-                    <li>
-                        <a href="#" class="nav-link user-link">Register</a>
-                    </li>
-                    <li class="nav-divider my-auto">|</li>
-                    <li>
-                        <a href="#" class="nav-link user-link">Login</a>
+                    <!-- <li class="nav-divider me-2 my-auto">{{ user.username }}</li>
+                    <li class="nav-divider my-auto">|</li> -->
+                    <li class="mx-2">
+                        <a href="{% url 'account_logout' %}" class="nav-link user-link">Logout</a>
                     </li>
                 </ul>
+                {% else %}
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="ms-2">
+                        <a href="{% url 'account_signup' %}" class="nav-link user-link">Sign up</a>
+                    </li>
+                    <!-- <li class="nav-divider my-auto">|</li> -->
+                    <li class="ms-2">
+                        <a href="{% url 'account_login' %}" class="nav-link login-link">Login</a>
+                    </li>
+                </ul>
+                {% endif %}
             </div>
         </div>
     </nav>
