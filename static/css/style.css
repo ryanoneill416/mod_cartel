@@ -1,11 +1,20 @@
 /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #FBFAF5;
 }
 
 a {
     text-decoration: none;
     color: #532568;
+}
+
+.black-bg {
+    background-color: #1B1C1B;
+}
+
+.white-bg {
+    background-color: #FBFAF5;
 }
 
 /* Navigation Styling */
@@ -14,20 +23,32 @@ a {
     height: 80px;
 }
 
-.black-bg {
-    background-color: #070606;
-}
-
-
-.navbar-nav li a {
-    font-family: 'Teko', sans-serif;
-    font-size: 1.75rem;
-    letter-spacing: .5px;
+.menu-nav-link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.65rem;
+    letter-spacing: .66px;
     color: #FBFAF5;
 }
 
-.nav-link:hover {
+.menu-nav-link:hover {
     color: #d383f8;
+}
+
+.user-link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+    color: #d383f8;
+}
+
+.user-link:hover {
+    color: #FBFAF5;
+}
+
+.nav-divider {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: #FBFAF5;
 }
 
 .navbar-toggler:focus {
@@ -45,12 +66,8 @@ a {
     border: none;
 }
 
-/* Footer Styling */
-.foot-logo {
-    width: 240px;
-    height: 80px;
-}
 
+/* Footer Styling */
 footer i {
     font-size: 2rem;
     color: #d383f8;

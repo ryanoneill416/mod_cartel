@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/c11f73347e.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -24,38 +24,43 @@
 
 <body>
 
-    <!-- Nav pending -->
-    <nav class="navbar navbar-expand-md sticky-top black-bg bg-gradient mb-4">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md sticky-top black-bg mb-4">
         <div class="container-fluid">
             <a href="{% url 'home' %}">
                 <img class="nav-logo" src="{% static 'images/mc-mainscriptpurple-removebg-preview.png' %}"
                     alt="Mod Cartel Logo">
             </a>
+            <!-- Navigation Burger Menu (Smaller Sized Screens) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mx-2">
-                        <a href="#" class="nav-link" aria-current="page" aria-label="Go to the home page">
+                    <li class="mx-2">
+                        <a href="#" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
                             EVENTS
                         </a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a href="#" class="nav-link" aria-current="page" aria-label="Go to the home page">
+                    <li class="mx-2">
+                        <a href="#" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
                             SHOWCASE
                         </a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a href="#" class="nav-link" aria-current="page" aria-label="Go to the home page">
+                    <li class="mx-2">
+                        <a href="#" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
                             MY GARAGE
                         </a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Register | Login</a>
+                    <li>
+                        <a href="#" class="nav-link user-link">Register</a>
+                    </li>
+                    <li class="nav-divider my-auto">|</li>
+                    <li>
+                        <a href="#" class="nav-link user-link">Login</a>
                     </li>
                 </ul>
             </div>
@@ -65,8 +70,8 @@
     <!-- Content from the pages extending from this template -->
     {% endblock content %}
 
-    <!-- Footer pending -->
-    <div class="container">
+    <!-- Footer -->
+    <div class="container white-bg">
         <footer class="py-4">    
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                     <p>© Mod Cartel 2022 | Educational Purposes</p>
