@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 text-center mx-auto mt-5">
+      <h3>{% trans "Login" %}</h3>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row no-gutters mt-5">
+    <p>{% blocktrans %}Welcome back to Mod Cartel! Login so you can post, interact and connect with others. If you haven't joined the cartel yet,
+    <a href="{{ signup_url }}">sign up</a>{% endblocktrans %}.</p>
+
+    <form class="login" method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="btn btn-lg btn-primary" type="submit">{% trans "Sign In" %}</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

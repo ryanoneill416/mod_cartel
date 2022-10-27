@@ -37,7 +37,7 @@
                 <i class="fa-solid fa-bars"></i></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mx-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="mx-2">
                         <a href="#" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
                             EVENTS
@@ -56,8 +56,6 @@
                 </ul>
                 {% if user.is_authenticated %}
                 <ul class="navbar-nav mb-2 mb-md-0">
-                    <!-- <li class="nav-divider me-2 my-auto">{{ user.username }}</li>
-                    <li class="nav-divider my-auto">|</li> -->
                     <li class="mx-2">
                         <a href="{% url 'account_logout' %}" class="nav-link user-link">Logout</a>
                     </li>
@@ -67,7 +65,6 @@
                     <li class="ms-2">
                         <a href="{% url 'account_signup' %}" class="nav-link user-link">Sign up</a>
                     </li>
-                    <!-- <li class="nav-divider my-auto">|</li> -->
                     <li class="ms-2">
                         <a href="{% url 'account_login' %}" class="nav-link login-link">Login</a>
                     </li>
