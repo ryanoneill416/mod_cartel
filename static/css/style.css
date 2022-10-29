@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #FBFAF5;
+    background-color: #1B1C1B;
 }
 
 a {
@@ -90,3 +90,33 @@ footer i {
 footer i:hover {
     color: #7d0ab3;
 }
+
+/* Login Page Styling */
+
+.login-page {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.login-page form {
+    background-color: #FBFAF5;
+}
+
+.login-border {
+    border: 2px solid black;
+}
+
+.btn-login {
+    background-color: #d383f8;
+    color: #FBFAF5;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.33rem;
+    letter-spacing: 1px;
+    padding: .5rem 1.5rem
+}
+
+.btn-login:hover {
+    background-color: #532568;
+    color: #FBFAF5;
+}
+
