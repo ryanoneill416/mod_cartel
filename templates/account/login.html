@@ -11,8 +11,8 @@
     <div class="row align-items-center">
       <div class="col-md-7 mx-auto">
         <form class="login login-border py-5" method="POST" action="{% url 'account_login' %}">
-          <h3>Member Login</h3>
-          <p>{% blocktrans %}Not a member? <a href="{{ signup_url }}">Join today</a>{% endblocktrans %}</p>
+          <h2>Welcome Back!</h2>
+          <p>{% blocktrans %}Not a member? Sign up <a href="{{ signup_url }}">here</a>{% endblocktrans %}</p>
           {% csrf_token %}
           {{ form.as_p }}
           {% if redirect_field_value %}
