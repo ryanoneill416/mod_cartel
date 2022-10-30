@@ -2,7 +2,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #1B1C1B;
-    color: #333;
+    color: #ffff;
 }
 
 a {
@@ -12,7 +12,7 @@ a {
 }
 
 a:hover {
-    color: #7d0ab3;
+    color: #d383f8c1;
 }
 
 .black-bg {
@@ -23,11 +23,11 @@ a:hover {
     background-color: #FBFAF5;
 }
 
-h2 {
+h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
+    font-size: 2.15rem;
     letter-spacing: .66px;
-    color: #1B1C1B;
+    color: #ffff;
 }
 /* Navigation Styling */
 .nav-logo {
@@ -93,6 +93,10 @@ h2 {
 
 
 /* Footer Styling */
+footer {
+    color: #333333;
+}
+
 footer i {
     font-size: 2rem;
     color: #d383f8;
@@ -111,14 +115,20 @@ footer i:hover {
 }
 
 .login-page form {
-    background-color: #FBFAF5;
-    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    background-color: #262626;
+    color: white;
 }
 
 .login-page input {
     text-align: center;
     padding-top: .25rem;
     padding-bottom: .25rem;
+    font-weight: bold;
+}
+
+.login-page p {
+    font-weight: bold;
+    font-size: 1.25rem;
 }
 
 
@@ -137,8 +147,5 @@ footer i:hover {
 }
 
 .btn-login:hover {
-    background-color: #532568;
-    color: #FBFAF5;
+    background-color: #d383f8c1;
 }
-
-
