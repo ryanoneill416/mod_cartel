@@ -3,7 +3,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #1B1C1B;
     color: #ffff;
-    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -94,6 +96,10 @@ h3 {
 
 
 /* Footer Styling */
+.footer-container {
+    margin-top: auto;
+}
+
 footer {
     color: #333333;
 }
