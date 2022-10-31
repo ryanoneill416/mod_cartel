@@ -25,7 +25,7 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md sticky-top black-bg mb-4">
+    <nav class="navbar navbar-expand-md sticky-top black-bg">
         <div class="container-fluid">
             <a href="{% url 'home' %}">
                 <img class="nav-logo me-4" src="{% static 'images/mc-mainscriptpurple-removebg-preview.png' %}"
@@ -44,7 +44,7 @@
                         </a>
                     </li>
                     <li class="ms-2">
-                        <a href="#" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
+                        <a href="{% url 'showcase' %}" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
                             SHOWCASE
                         </a>
                     </li>
