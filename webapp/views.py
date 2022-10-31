@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic, View
-from .models import Build
+from .models import Build, Comment
 
 
 class Home(View):
@@ -19,3 +19,15 @@ class Home(View):
             "featured_builds": featured_builds,
         }
         return render(request, 'index.html', context)
+
+
+class Showcase(generic.ListView):
+    """
+    View for the 'Showcase' Page
+    Will show all member's posted builds
+    """
+
+    model = Build
+    queryset = Build.objects.order_by('-publish_date')
+    template_name = 'showcase.html'
+    paginate_by = 9
