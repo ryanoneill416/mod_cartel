@@ -134,6 +134,9 @@ footer i:hover {
     font-weight: bold;
 }
 
+.user-page h3 {
+    color: #d383f8;
+}
 .user-page label {
     display: block;
     margin-bottom: .25rem;
@@ -143,6 +146,10 @@ footer i:hover {
     font-size: 1.25rem;
 }
 
+.user-page img {
+    width: 225px;
+    height: 150px;
+}
 
 .user-border {
     border-radius: .75rem;

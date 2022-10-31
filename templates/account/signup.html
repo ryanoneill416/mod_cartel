@@ -9,7 +9,7 @@
     <div class="row align-items-center">
       <div class="col-md-7 mx-auto">
         <form class="user-border pt-3 pb-4 signup" method="POST" action="{% url 'account_signup' %}">
-          <img class="mb-1" src="{% static 'images/mc-logo-wp-removebg-preview.png' %}" alt="Mod Cartel 'MC' Logo" width="150px" height="150px">
+          <img class="my-3" src="{% static 'images/mc-logo-w-removebg-preview.png' %}" alt="Mod Cartel 'MC' Logo" width="150px" height="150px">
           <h3>{% trans "Become A Member" %}</h3>
           <p class="mb-5">{% blocktrans %}Already a member? Sign in <a href="{{ login_url }}">here</a>{% endblocktrans %}</p>
           {% csrf_token %}
