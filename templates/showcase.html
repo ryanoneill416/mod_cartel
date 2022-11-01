@@ -2,18 +2,12 @@
 {% load static %}
 {% block content %}
 
+<!-- Hero Image w/ Showcase Title -->
 <div class="container-fluid">
     <div class="row">
-        <!-- Showcase Page Hero Image -->
-        <!-- <div class="showcase-hero position-relative" -->
-        <!-- <img src="{% static 'images/jorge-simmons-unsplash-resized.pmg' %}" alt="Showcase hero image">
-            <div class="text-center position-absolute bottom-0 start-50 translate-middle-x mb-1">
-                <h1 class="display-1 hero-heading">
-                    The Showcase
-                </h1> -->
         <div class="showcase-hero position-relative">
             <div class="showcase-hero-image">
-                <div class="text-center position-absolute bottom-0 start-50 translate-middle-x mb-1">
+                <div class="text-center position-absolute bottom-0 start-50 translate-middle-x">
                     <h1 class="display-1 hero-heading">
                         The Showcase
                     </h1>
@@ -22,4 +16,24 @@
         </div>
     </div>
 </div>
+
+<!-- Featured Description w/ Call-to-Action -->
+<section class="py-5 text-center container">
+    <div class="row pb-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <p class="lead muted-text mb-4">
+                This is the car meet that you'll never miss! Show off your builds, find inspiration from others and connect with like-minded car enthusiasts globally.
+            </p>
+            {% if user.is_authenticated %}
+                <p>
+                    <a href="#" class="btn btn-user">Post My Build</a>
+                </p>
+            {% else %}
+                <p>
+                    <a href="#" class="btn btn-user">Become a member</a>
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</section>
 {% endblock %}

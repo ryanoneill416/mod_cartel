@@ -13,7 +13,7 @@
         <form class="user-border pt-3 pb-4" method="POST" action="{% url 'account_logout' %}">
           <img class="my-3" src="{% static 'images/mc-logo-w-removebg-preview.png' %}" alt="Mod Cartel 'MC' Logo" width="150px" height="150px">
           <h3>{% trans "Sign Out" %}</h3>
-          <p class="mb-4">{% trans "Are you sure you'd like to sign out?"%}</p>
+          <p class="mb-4 muted-text">{% trans "Are you sure you'd like to sign out?"%}</p>
           {% csrf_token %}
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />

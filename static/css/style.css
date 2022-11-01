@@ -8,6 +8,11 @@ body {
     flex-direction: column;
 }
 
+/* Overriding color for more accessible contrast w/ background */
+.muted-text {
+    color: rgba(255, 255, 255, 0.75);
+}
+
 h1 {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: .05rem;
@@ -27,7 +32,7 @@ a:hover {
 }
 
 .black-bg {
-    background-color: #1B1C1B;
+    background-color: #181818;
 }
 
 .white-bg {
@@ -40,6 +45,7 @@ h3 {
     letter-spacing: .66px;
     color: #ffff;
 }
+
 /* Navigation Styling */
 .nav-logo {
     width: 240px;
@@ -88,11 +94,11 @@ h3 {
 }
 
 .navbar-toggler:focus {
-    box-shadow: rgb(211 131 248 / 25%) 0px 54px 55px, 
-    rgb(211 131 248 / 12%) 0px -12px 30px, 
-    rgb(211 131 248 / 12%) 0px 4px 6px, 
-    rgb(211 131 248 / 17%) 0px 12px 13px, 
-    rgb(211 131 248 / 9%) 0px -3px 5px;
+    box-shadow: rgb(211 131 248 / 25%) 0px 54px 55px,
+        rgb(211 131 248 / 12%) 0px -12px 30px,
+        rgb(211 131 248 / 12%) 0px 4px 6px,
+        rgb(211 131 248 / 17%) 0px 12px 13px,
+        rgb(211 131 248 / 9%) 0px -3px 5px;
 }
 
 .navbar-toggler {
@@ -131,7 +137,7 @@ footer i:hover {
 }
 
 .user-page form {
-    background-color: #262626;
+    background-color: #181818;
     color: white;
 }
 
@@ -145,10 +151,12 @@ footer i:hover {
 .user-page h3 {
     color: #d383f8;
 }
+
 .user-page label {
     display: block;
     margin-bottom: .25rem;
 }
+
 .user-page p {
     font-weight: bold;
     font-size: 1.25rem;
@@ -169,7 +177,7 @@ footer i:hover {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    padding: .75rem 2.5rem;
+    padding: .5rem 2rem;
     margin: 1rem 0;
 }
 
@@ -190,6 +198,7 @@ footer i:hover {
 .hero-heading {
     width: 90vw;
 }
+
 .showcase-hero {
     background-repeat: no-repeat;
     background-size: cover;
