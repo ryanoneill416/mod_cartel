@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #1B1C1B;
+    background-color: #121212;
     color: #ffff;
     min-height: 100vh;
     display: flex;
@@ -12,7 +12,7 @@ h1 {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: .05rem;
     font-size: 4rem;
-    text-decoration: underline 3px solid #d383f8;
+    text-decoration: underline .075rem solid #d383f8;
     text-underline-offset: .5rem;
 }
 
@@ -193,7 +193,7 @@ footer i:hover {
 .showcase-hero {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)), url(/static/images/jorge-simmons-unsplash-resized.png); */
+    background-position: center center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(18, 18, 18)), url("https://res.cloudinary.com/dgxr5lnrt/image/upload/v1667305471/jorge-simmons-unsplash-resized_rsjaqy.png");
     height: 27.5vh;
 }
