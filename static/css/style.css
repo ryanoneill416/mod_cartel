@@ -61,6 +61,10 @@ h3 {
 }
 
 /* Navigation Styling */
+.nav-bg {
+    background-color: rgba(18, 18, 18, .9);
+}
+
 .nav-logo {
     width: 240px;
     height: 80px;
@@ -264,4 +268,40 @@ footer i:hover {
 .card-indicator {
     font-size: 1.75rem;
     margin: 0 2px;
+}
+
+/* Media Queries For Responsive Design */
+@media (max-width: 1200px) {
+    .card {
+        max-width: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        height: 350px;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    .card-indicator {
+        font-size: 1.6rem;
+    }
+    .card-body {
+        height: 66px;
+    }
+}
+
+@media (max-width: 450px) {
+    .card {
+        height: 300px;
+    }
 }
