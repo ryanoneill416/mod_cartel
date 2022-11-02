@@ -21,6 +21,20 @@ h1 {
     text-underline-offset: .5rem;
 }
 
+h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.15rem;
+    letter-spacing: .66px;
+    color: #ffff;
+}
+
+h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: .66px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 a {
     font-weight: 900;
     color: #d383f8;
@@ -31,13 +45,13 @@ a:hover {
     color: #d383f8c1;
 }
 
-.black-bg {
-    background-color: #181818;
+.purp-bg {
+    color: #d383f8;
 }
 
 .white-bg {
     background-color: #FBFAF5;
-}
+} 
 
 h3 {
     font-family: 'Bebas Neue', sans-serif;
@@ -130,7 +144,6 @@ footer i:hover {
 
 
 /* Login/Logout/Sign-Up Page Styling */
-
 .user-page {
     margin-top: 3rem;
     margin-bottom: 5rem;
@@ -212,12 +225,18 @@ footer i:hover {
 }
 
 .card {
-    height: 500px;
+    height: 475px;
     width: 700px;
     margin: auto;
     max-width: 45vw;
-    border-radius: 10px;
     border: none;
+    border-radius: 10px;
+    border-bottom: 2px solid #d383f8;
+}
+
+.card:hover {
+    border-bottom: 2px solid #ffff;
+    transition: ease-in-out .33s;
 }
 
 .build-card {
@@ -232,13 +251,17 @@ footer i:hover {
     height: 100%;
     background-size: cover;
     background-position: center;
-    /* background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 65%); */
     background-color: #181818;
     border-radius: 10px 10px 0 0;
 }
 
 .card-body {
     background-color: #181818;
-    color: #FBFAF5;
+    color: #ffff;
     border-radius: 0 0 10px 10px;
+}
+
+.card-indicator {
+    font-size: 1.75rem;
+    margin: 0 2px;
 }
