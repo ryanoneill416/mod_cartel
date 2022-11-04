@@ -59,6 +59,8 @@ LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+SUMMERNOTE_THEME = 'bs5'
+
 SUMMERNOTE_CONFIG = {
     'toolbar': [
         ['font', ['bold', 'underline', 'italic', 'clear']],
