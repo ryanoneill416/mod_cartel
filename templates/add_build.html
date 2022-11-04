@@ -15,8 +15,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-8 mt-3 mx-auto text-center">
-            <form method="POST" enctype="multipart/form-data">
+        <div class="col-10 mt-3 mx-auto text-center">
+            <form method="POST" enctype="multipart/form-data" class="add_build_form mx-auto">
                 {% csrf_token %}
                 {{ build_form|crispy }}
                 <button class="btn btn-user" type="submit" value="Save">Add Build</button>

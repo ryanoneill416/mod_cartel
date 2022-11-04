@@ -270,6 +270,36 @@ footer i:hover {
     margin: 0 2px;
 }
 
+/* Styling of "add_build.html" */
+.add_build_form input[type="file"] {
+    width: 225px;
+}
+
+form iframe {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.add_build_form input {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add_build_form input[type="text"] {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.add_build_form input[type="number"] {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.add_build_form label {
+    width: 100%;
+    text-align: center;
+}
+
 /* Media Queries For Responsive Design */
 @media (max-width: 1200px) {
     .card {
