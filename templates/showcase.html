@@ -27,7 +27,7 @@
             </p>
             {% if user.is_authenticated %}
             <p>
-                <a href="#" class="btn btn-user">Post My Build</a>
+                <a href="{% url 'add_build' %}" class="btn btn-user">Post My Build</a>
             </p>
             {% else %}
             <p>

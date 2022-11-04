@@ -33,3 +33,39 @@ class Showcase(generic.ListView):
     queryset = Build.objects.order_by('-publish_date')
     template_name = 'showcase.html'
     paginate_by = 9
+
+
+class AddBuild(View):
+    """
+    View for adding a user's build
+    """
+
+    def get(self, request):
+        """
+        Retrieving the form
+        """
+        return render(request, "add_build.html", {"build_form": BuildForm()})
+
+    def post(self, request):
+        """
+        Posting the build after form completion
+        """
+        build_form = BuildForm(request.POST, request.FILES)
+
+        if build_form.is_valid():
+            build = build_form.save(commit=False)
+            build.member = request.user
+            build.slug = slugify('-'.join([str(build.member), str(build.year),
+                                           build.make, build.model]),
+                                 allow_unicode=False)
+            build.save()
+            return redirect('showcase')
+        else:
+            build_form = BuildForm()
+
+            return render(
+                request, "add_build.html",
+                {
+                    "build_form": build_form
+                },
+            )
