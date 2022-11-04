@@ -4,26 +4,21 @@
 {% load crispy_forms_tags %}
 
 {% if user.is_authenticated %}
-<div class="container">
-    <div class="row">
-        <div class="col-12 text-center mt-3">
-            <h1>Showcase your build</h1>
-            <hr>
+<section class="build-creation-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mt-3 mx-auto text-center">
+                <!-- <h1>Showcase your build</h1> -->
+                <form method="POST" enctype="multipart/form-data" class="add_build_form darkg-bg px-5">
+                    <h1>Join The Showcase</h1>
+                    {% csrf_token %}
+                    {{ build_form|crispy }}
+                    <button class="btn btn-user" type="submit" value="Save">Add Build</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-10 mt-3 mx-auto text-center">
-            <form method="POST" enctype="multipart/form-data" class="add_build_form">
-                {% csrf_token %}
-                {{ build_form|crispy }}
-                <button class="btn btn-user" type="submit" value="Save">Add Build</button>
-            </form>
-        </div>
-    </div>
-</div>
+</section>
 
 
 {% endif %}

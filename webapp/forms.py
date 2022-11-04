@@ -27,5 +27,14 @@ class BuildForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(BuildForm, self).__init__(*args, **kwargs)
         self.fields[
-            'build_image'
-            ].label = "Upload a landscape image showcasing your build"
+                'build_image'
+                ].label = "Upload a landscape image of your build"
+        self.fields[
+                'overview'
+                ].label = "Build Overview"
+        self.fields[
+                'specifications'
+                ].label = "Build Specifications / Modifications"
+        self.fields[
+                'plans'
+                ].label = "Future Plans / Recommendations"

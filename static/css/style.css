@@ -45,6 +45,10 @@ a:hover {
     color: #d383f8c1;
 }
 
+.darkg-bg {
+    background-color: #181818;
+}
+
 .purp-bg {
     color: #d383f8;
 }
@@ -271,16 +275,24 @@ footer i:hover {
 }
 
 /* Styling of "add_build.html" */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+form html body {
+    max-width: 100%;
+}
+
+.requiredField {
+    margin-bottom: .5rem;
+}
+
 .add_build_form input[type="file"] {
     width: 225px;
 }
 
-form iframe {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
 .add_build_form input {
+    display: block;
     margin: 0 auto;
     text-align: center;
 }
