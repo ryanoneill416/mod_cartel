@@ -59,6 +59,14 @@ LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+SUMMERNOTE_CONFIG = {
+    'toolbar': [
+        ['font', ['bold', 'underline', 'italic', 'clear']],
+        ['para', ['ul', 'ol']],
+        ['insert', ['link', 'picture', 'video']],
+    ]
+}
+
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
