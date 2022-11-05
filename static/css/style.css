@@ -287,6 +287,11 @@ form html body {
     margin-bottom: .5rem;
 }
 
+.add_build_form h3 {
+    text-decoration: underline .075rem solid #ffff;
+    text-underline-offset: .5rem;
+}
+
 .add_build_form input[type="file"] {
     width: 225px;
 }
@@ -299,17 +304,20 @@ form html body {
 
 .add_build_form input[type="text"] {
     width: 50%;
+    min-width: 200px;
     margin: 0 auto;
 }
 
 .add_build_form input[type="number"] {
     width: 50%;
+    min-width: 200px;
     margin: 0 auto;
 }
 
 .add_build_form label {
     width: 100%;
     text-align: center;
+    /* color: rgba(255, 255, 255, 0.85); */
 }
 
 /* Media Queries For Responsive Design */
@@ -345,5 +353,11 @@ form html body {
 @media (max-width: 450px) {
     .card {
         height: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .add_build_form p {
+        font-size: 1.05rem;
     }
 }
