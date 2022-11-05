@@ -319,6 +319,17 @@ form html body {
     text-align: center;
 }
 
+/* Pagination Styling */
+.pagination .btn-user {
+    margin-right: .5rem;
+    font-size: 1.33rem;
+    border: none;
+    padding: .5rem 1.35rem;
+}
+
+.pagination .btn-user:hover {
+    color: #ffff;
+}
 
 /* Media Queries For Responsive Design */
 @media (max-width: 1200px) {
