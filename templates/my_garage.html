@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+
+<!-- Hero Image w/ Showcase Title -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="garage-hero position-relative">
+            <div class="page-hero-image">
+                <div class="text-center position-absolute bottom-0 start-50 translate-middle-x">
+                    <h1 class="display-1 hero-heading">
+                        My Garage
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Description w/ Call-to-Action -->
+<section class="py-5 text-center container">
+    <div class="row pb-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <p class="lead muted-text mb-4">
+                The one place you can store your past and present car collection without the stress of rent ;) Here, you can manage, edit and add new builds as you please.
+            </p>
+            <p>
+                <a href="{% url 'add_build' %}" class="btn btn-user">Add New Build</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+{% include "pagination.html" %}
+{% endif %}
+{% endblock %}

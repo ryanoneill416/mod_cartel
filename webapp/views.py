@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from django.utils.text import slugify
+from django.core.paginator import Paginator
 from .models import Build, Comment
 from .forms import BuildForm
 
@@ -33,6 +34,25 @@ class Showcase(generic.ListView):
     queryset = Build.objects.order_by('-publish_date')
     template_name = 'showcase.html'
     paginate_by = 6
+
+
+class MyGarage(generic.ListView):
+    """
+    View for the 'My Garage' Page
+    Will show all of a member's builds
+    """
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            build = Build.objects.filter(member=request.user)
+
+            paginator = Paginator(build, 6)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(
+                request, 'my_garage.html', {"page_obj": page_obj, })
+        else:
+            return render(request, 'my_garage.html')
 
 
 class AddBuild(View):

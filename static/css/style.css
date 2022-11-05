@@ -228,6 +228,14 @@ footer i:hover {
     height: 27.5vh;
 }
 
+.garage-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(18, 18, 18)), url("https://res.cloudinary.com/dgxr5lnrt/image/upload/v1667676799/patrik-storm-alstra-pictures-KswvseGgnlk-unsplash_uojhbi.jpg");
+    height: 27.5vh;
+}
+
 .showcase-container {
     max-width: 1600px;
 }
