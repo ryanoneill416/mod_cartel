@@ -32,7 +32,7 @@ class Showcase(generic.ListView):
     model = Build
     queryset = Build.objects.order_by('-publish_date')
     template_name = 'showcase.html'
-    paginate_by = 9
+    paginate_by = 6
 
 
 class AddBuild(View):

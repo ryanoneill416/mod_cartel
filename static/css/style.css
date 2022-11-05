@@ -317,8 +317,8 @@ form html body {
 .add_build_form label {
     width: 100%;
     text-align: center;
-    /* color: rgba(255, 255, 255, 0.85); */
 }
+
 
 /* Media Queries For Responsive Design */
 @media (max-width: 1200px) {
