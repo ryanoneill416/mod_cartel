@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
+from django.views.generic import UpdateView
 from django.utils.text import slugify
 from django.core.paginator import Paginator
 from .models import Build, Comment
@@ -17,6 +18,7 @@ class Home(View):
         get request to retrieve the home page
         with the featured posts included
         """
+
         featured_builds = Build.objects.filter(is_featured=True)[:4]
         context = {
             "featured_builds": featured_builds,
@@ -64,12 +66,14 @@ class AddBuild(View):
         """
         Retrieving the form
         """
+
         return render(request, "add_build.html", {"build_form": BuildForm()})
 
     def post(self, request):
         """
         Posting the build after form completion
         """
+
         build_form = BuildForm(request.POST, request.FILES)
 
         if build_form.is_valid():
@@ -89,3 +93,13 @@ class AddBuild(View):
                     "build_form": build_form
                 },
             )
+
+
+class EditBuild(UpdateView):
+    """
+    View for editing a user's build
+    """
+
+    model = Build
+    form_class = BuildForm
+    template_name = 'edit_build.html'

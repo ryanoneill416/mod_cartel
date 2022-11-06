@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% if user.is_authenticated %}
+<section class="user-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mt-2 mx-auto text-center">
+                <form method="POST" enctype="multipart/form-data" class="add_build_form darkg-bg px-5 pt-3 pb-4 user-border">
+                    <h3 class="display-2 mt-3">Post your build</h3>
+                    <p class="mb-4">Add Your Build To The 'Showcase'</p>
+                    {% csrf_token %}
+                    {{ build_form|crispy }}
+                    <button class="btn btn-user" type="submit" value="Save">Add Build</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endif %}
+
+{% endblock %}
