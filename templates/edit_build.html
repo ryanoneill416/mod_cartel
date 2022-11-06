@@ -3,17 +3,17 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% if user.is_authenticated %}
+{% if user.is_authenticated and user.id == build.member.id %}
 <section class="user-page">
     <div class="container">
         <div class="row">
             <div class="col-md-10 mt-2 mx-auto text-center">
                 <form method="POST" enctype="multipart/form-data" class="add_build_form darkg-bg px-5 pt-3 pb-4 user-border">
-                    <h3 class="display-2 mt-3">Post your build</h3>
-                    <p class="mb-4">Add Your Build To The 'Showcase'</p>
+                    <h3 class="display-2 mt-3">Update your build</h3>
+                    <p class="mb-4">Show everyone the current state of your build</p>
                     {% csrf_token %}
-                    {{ build_form|crispy }}
-                    <button class="btn btn-user" type="submit" value="Save">Add Build</button>
+                    {{ form.as_p }}
+                    <button class="btn btn-user" type="submit" value="Save">Update Build</button>
                 </form>
             </div>
         </div>

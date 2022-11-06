@@ -46,7 +46,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="#" class="build-card-title"><h4>{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
                                 <div class="card-indicator btn-group">
-                                    <a href="#" class="me-3"><i class="fa-regular fa-pen-to-square"></i></a>
+                                    <a href="{% url 'edit_build' build.id %}" class="me-3"><i class="fa-regular fa-pen-to-square"></i></a>
                                     <a href="#"><i class="fa-solid fa-trash-can"></i></a>
                                 </div>
                             </div>
