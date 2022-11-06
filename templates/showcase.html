@@ -65,5 +65,7 @@
         </div>
     </div>
 </div>
-{% include "pagination.html" %}
+{% if is_paginated %}
+    {% include "pagination.html" %}
+{% endif %}
 {% endblock %}
