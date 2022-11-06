@@ -33,6 +33,10 @@ class Build(models.Model):
         """ Counts number of likes on build """
         return self.likes.count()
 
+    def get_absolute_url(self):
+        """ Gets the absolute URL of build """
+        return reverse('my_garage')
+
 
 class Comment(models.Model):
     """ Model for comments made by members """
