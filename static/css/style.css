@@ -248,11 +248,11 @@ footer i:hover {
     border: none;
     border-radius: 10px;
     border-bottom: 2px solid #d383f8;
+    transition: border-bottom .25s ease-in-out;
 }
 
 .card:hover {
     border-bottom: 2px solid #ffff;
-    transition: ease-in-out .33s;
 }
 
 .build-card {
@@ -271,6 +271,15 @@ footer i:hover {
     border-radius: 10px 10px 0 0;
 }
 
+.build-card-title h4 {
+    color: #ffff;
+    transition: color .2s ease-in-out;
+}
+
+.build-card-title h4:hover {
+    color: #d383f8;
+}
+
 .card-body {
     background-color: #181818;
     color: #ffff;
@@ -280,6 +289,15 @@ footer i:hover {
 .card-indicator {
     font-size: 1.75rem;
     margin: 0 2px;
+}
+
+.card-indicator a {
+    color: white;
+    transition: color .2s ease-in-out;
+}
+
+.card-indicator a:hover {
+    color: #d383f8;
 }
 
 /* Styling of "add_build.html" */
