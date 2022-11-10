@@ -7,4 +7,6 @@ urlpatterns = [
     path('my_garage/', views.MyGarage.as_view(), name='my_garage'),
     path('add_build/', views.AddBuild.as_view(), name='add_build'),
     path('edit_build/<int:pk>', views.EditBuild.as_view(), name='edit_build'),
+    path('delete_build/<int:build_id>',
+         views.delete_build, name='delete_build'),
 ]

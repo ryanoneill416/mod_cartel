@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import UpdateView
+from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from django.core.paginator import Paginator
 from .models import Build, Comment
@@ -44,6 +45,7 @@ class MyGarage(generic.ListView):
     Will show all of a member's builds
     """
 
+
     def get(self, request):
         if request.user.is_authenticated:
             build = Build.objects.filter(member=request.user)
@@ -62,6 +64,7 @@ class AddBuild(View):
     View for adding a user's build
     """
 
+    @login_required
     def get(self, request):
         """
         Retrieving the form
@@ -69,6 +72,7 @@ class AddBuild(View):
 
         return render(request, "add_build.html", {"build_form": BuildForm()})
 
+    @login_required
     def post(self, request):
         """
         Posting the build after form completion
@@ -103,3 +107,13 @@ class EditBuild(UpdateView):
     model = Build
     form_class = BuildForm
     template_name = 'edit_build.html'
+
+
+@login_required
+def delete_build(request, build_id):
+    """
+    Deletes a specified user build
+    """
+    build = get_object_or_404(Build, id=build_id)
+    build.delete()
+    return redirect(reverse('my_garage'))
