@@ -362,6 +362,10 @@ form html body {
 
 
 /* deleteBuild Modal Styling */
+.modal-content {
+    border: 1px solid rgba(255, 255, 255, .85);
+}
+
 .modal-header {
     border-bottom: none;
     padding: 1rem 1rem 0;
@@ -376,6 +380,27 @@ form html body {
     margin-bottom: .25em;
     color: #ffff;
     opacity: .75;
+    transition: opacity .2s ease-in-out;
+}
+
+.btn-close-modal:hover {
+    opacity: 1;
+    color: #ffff;
+}
+
+.modal-body {
+    padding: 1em 1em 0;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-bottom: 1.25em;
+}
+
+.modal-footer a {
+    font-family: 'Bebas Neue';
+    font-size: 1.3rem;
+    letter-spacing: .5px;
 }
 
 /* Media Queries For Responsive Design */
