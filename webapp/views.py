@@ -63,7 +63,6 @@ class AddBuild(View):
     View for adding a user's build
     """
 
-    @login_required
     def get(self, request):
         """
         Retrieving the form
