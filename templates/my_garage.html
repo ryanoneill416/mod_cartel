@@ -47,8 +47,27 @@
                                 <a href="#" class="build-card-title"><h4>{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
                                 <div class="card-indicator btn-group">
                                     <a href="{% url 'edit_build' build.id %}" class="me-3"><i class="fa-regular fa-pen-to-square"></i></a>
-                                    <a href="{% url 'delete_build' build.id %}"><i class="fa-solid fa-trash-can"></i></a>
+                                    <a href="#deleteBuild{{ build.id }}" data-bs-toggle="modal"><i class="fa-solid fa-trash-can"></i></a>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- Delete Build Clarification Modal -->
+                        <div class="modal fade" id="deleteBuild{{ build.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content darkg-bg">
+                                <div class="modal-header">
+                                  <h3 class="modal-title" id="staticBackdropLabel">Are you sure?</h3>
+                                  <a href="" data-bs-dismiss="modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></a>
+                                </div>
+                                <div class="modal-body">
+                                  <p class="muted-text">All evidence of it's existence will be erased permanently.<br>
+                                    Please Note: Old builds that may be with another can stay, you're showing what you accomplished!
+                                  </p>
+                                </div>
+                                <div class="modal-footer">
+                                  <a href="{% url 'delete_build' build.id %}" class="btn btn-danger mx-auto">Delete Build</a>
+                                </div>
+                              </div>
                             </div>
                         </div>
                     </div>

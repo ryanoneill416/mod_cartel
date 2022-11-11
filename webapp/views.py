@@ -45,7 +45,6 @@ class MyGarage(generic.ListView):
     Will show all of a member's builds
     """
 
-
     def get(self, request):
         if request.user.is_authenticated:
             build = Build.objects.filter(member=request.user)

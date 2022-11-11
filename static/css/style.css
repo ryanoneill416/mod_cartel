@@ -215,6 +215,7 @@ footer i:hover {
     margin-bottom: .5rem;
 }
 
+
 /* 'Showcase' Page styling */
 .hero-heading {
     width: 90vw;
@@ -300,6 +301,7 @@ footer i:hover {
     color: #d383f8;
 }
 
+
 /* Styling of "add_build.html" */
 .form-group {
     margin-bottom: 1.25rem;
@@ -345,6 +347,7 @@ form html body {
     text-align: center;
 }
 
+
 /* Pagination Styling */
 .pagination .btn-user {
     margin-right: .5rem;
@@ -355,6 +358,24 @@ form html body {
 
 .pagination .btn-user:hover {
     color: #ffff;
+}
+
+
+/* deleteBuild Modal Styling */
+.modal-header {
+    border-bottom: none;
+    padding: 1rem 1rem 0;
+}
+
+.modal-header h3 {
+    color: #d383f8;
+}
+
+.btn-close-modal {
+    font-size: 1.85rem;
+    margin-bottom: .25em;
+    color: #ffff;
+    opacity: .75;
 }
 
 /* Media Queries For Responsive Design */
