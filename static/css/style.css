@@ -14,11 +14,18 @@ body {
 }
 
 h1 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue';
     letter-spacing: .05rem;
     font-size: 4rem;
     text-decoration: underline .075rem solid #d383f8;
     text-underline-offset: .5rem;
+}
+
+h2 {
+    font-family: 'Bebas Neue';
+    letter-spacing: .04rem;
+    font-size: 2.75rem;
+    opacity: 92.5%;
 }
 
 h3 {
@@ -401,6 +408,18 @@ form html body {
     font-family: 'Bebas Neue';
     font-size: 1.3rem;
     letter-spacing: .5px;
+}
+
+
+/* Build Detail Styling  */
+.build-detail h3 {
+    text-decoration: underline .075rem solid #d383f8;
+    text-underline-offset: .5rem;
+}
+
+.build-detail-pic {
+    max-height: 33vh;
+    max-width: 100%;
 }
 
 /* Media Queries For Responsive Design */

@@ -38,9 +38,9 @@
     </div>
 </section>
 
+<!-- Card containing build identifiers and showcase image to allow member viewing -->
 <div class="py-5">
     <div class="container px-3 showcase-container">
-
         <div class="row row-cols-1 row-cols-xl-2 g-5 align-items-stretch">
             {% for build in build_list %}
             <div class="col">
@@ -49,8 +49,8 @@
                     </a>
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="{% url 'build_detail' build.slug %}" class="build-card-title"><h4>{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
-                            <div class="card-indicator btn-group">
+                            <a href="{% url 'build_detail' build.slug %}" class="build-card-title"><h4 class="my-auto">{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
+                            <div class="card-indicator btn-group my-auto">
                                 <a href="#" class="me-3"><i class="fa-regular fa-heart"></i></a>
                                 <a href="#"><i class="fa-regular fa-bookmark"></i></a>
                             </div>
@@ -62,6 +62,7 @@
         </div>
     </div>
 </div>
+
 {% if is_paginated %}
     {% include "pagination.html" %}
 {% endif %}

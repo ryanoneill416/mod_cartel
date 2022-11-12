@@ -1,8 +1,39 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends "base.html" %}
 {% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% if user.is_authenticated %}
+<section class="build-detail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mt-5 mx-auto">
+                <div class=" darkg-bg px-3 pt-3 pb-4 user-border">
+                    <h3 class="display-2 mt-3 text-center">{{ build.year }} {{ build.make }} {{ build.model }}</h3>
+                    <p class="mb-4 fs-5 text-center">Built by: {{ build.member | title }}</p>
+                    <img src="{{ build.build_image.url }}" alt="Showcase Image of Member Build" class="build-detail-pic mb-3">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <p class="my-auto ms-3">Last updated: {{ build.updated_date }}</p>
+                        <div class="card-indicator btn-group my-auto">
+                            <a href="#" class="me-3"><i class="fa-regular fa-heart fs-1"></i></a>
+                            <a href="#"><i class="fa-regular fa-bookmark fs-1 me-3"></i></a>
+                        </div>
+                    </div>
+                    <h2 class="text-center mb-1"> Build Overview:</h2>
+                    <p class="muted-text">{{ build.overview | striptags }}</p>
+                    <hr>
+                    <h2 class="text-center mb-1">Mods and Specs:</h2>
+                    <p class="muted-text">{{ build.specifications | striptags }}</p>
+                    <hr>
+                    <h2 class="text-center mb-1">Plans / Recommendations:</h2>
+                    <p class="muted-text">{{ build.plans | striptags }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<h1>{{ build.member }}'s {{ build.make }} {{ build.model }} {{ build.publish_date }}</h1>
+{% endif %}
 
 {% endblock %}
