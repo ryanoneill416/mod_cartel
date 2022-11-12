@@ -39,6 +39,7 @@
         <div class="row row-cols-1 row-cols-xl-2 g-5 align-items-stretch">
             {% for build in page_obj %}
             <div class="col">
+                    <!-- Shows all builds that the signed in user has posted -->
                     <div class="card">
                         <a href="#" class="showcase-image" style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('{{ build.build_image.url }}');">
                         </a>
@@ -54,7 +55,7 @@
                         <!-- Delete Build Clarification Modal -->
                         <div class="modal fade" id="deleteBuild{{ build.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content darkg-bg">
+                              <div class="modal-content darkg-bg mx-3">
                                 <div class="modal-header">
                                   <h3 class="modal-title" id="staticBackdropLabel">Are you sure?</h3>
                                   <a href="" data-bs-dismiss="modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></a>
