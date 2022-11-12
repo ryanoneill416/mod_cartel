@@ -9,4 +9,5 @@ urlpatterns = [
     path('edit_build/<int:pk>', views.EditBuild.as_view(), name='edit_build'),
     path('delete_build/<int:build_id>',
          views.delete_build, name='delete_build'),
+    path('<slug:slug>/', views.BuildDetail.as_view(), name="build_detail"),
 ]
