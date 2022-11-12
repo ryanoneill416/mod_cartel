@@ -39,6 +39,36 @@ class Showcase(generic.ListView):
     paginate_by = 6
 
 
+class BuildDetail(View):
+    """
+    View showing all the build details of
+    a specified member's build
+    """
+
+    def get(self, request, slug):
+        """
+        get request to retreive the build details
+        for the build in question
+        """
+
+        queryset = Build.objects.all()
+        build = get_object_or_404(queryset, slug=slug)
+        comments = build.build_comments.order_by('-comment_date')
+        liked = False
+        if build.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        return render(
+            request,
+            'build_detail.html',
+            {
+                "build": build,
+                "comments": comments,
+                "liked": liked,
+            }
+        )
+
+
 class MyGarage(generic.ListView):
     """
     View for the 'My Garage' Page
