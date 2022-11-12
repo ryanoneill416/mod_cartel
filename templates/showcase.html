@@ -45,11 +45,11 @@
             {% for build in build_list %}
             <div class="col">
                 <div class="card">
-                    <a href="#" class="showcase-image" style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('{{ build.build_image.url }}');">
+                    <a href="{% url 'build_detail' build.slug %}" class="showcase-image" style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('{{ build.build_image.url }}');">
                     </a>
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="#" class="build-card-title"><h4>{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
+                            <a href="{% url 'build_detail' build.slug %}" class="build-card-title"><h4>{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
                             <div class="card-indicator btn-group">
                                 <a href="#" class="me-3"><i class="fa-regular fa-heart"></i></a>
                                 <a href="#"><i class="fa-regular fa-bookmark"></i></a>
