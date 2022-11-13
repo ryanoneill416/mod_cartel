@@ -435,6 +435,21 @@ form html body {
 
 .comment-display p {
     margin-bottom: .33rem;
+    text-align: left;
+}
+
+.comment-section textarea {
+    background-color: #ffff;
+    color: #121212;
+    height: 66px;
+    border: none;
+    outline: 1.5px solid #d383f8;
+}
+
+.comment-section .btn-user {
+    margin: 0;
+    padding: .2rem 1.5rem;
+    font-size: 1.33rem;
 }
 
 

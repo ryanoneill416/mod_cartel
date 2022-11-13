@@ -43,6 +43,16 @@
                             to how the car looks and the color and wheel combo are to die for :)
                         </p>
                     </div>
+                    <div class="comment-display px-3 py-2 mt-3 mb-5 user-border text-center">
+                        {% if user.is_authenticated %}
+                        <form method="post mx-auto">
+                            <p>Leave a comment:</p>
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-user mb-2">Post</button>
+                        </form>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
