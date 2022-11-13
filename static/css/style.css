@@ -418,9 +418,25 @@ form html body {
 }
 
 .build-detail-pic {
-    max-height: 33vh;
-    max-width: 100%;
+    max-height: 37.5vh;
+    width: 100%;
 }
+
+
+/* Comment Section Styling */
+.comment-display {
+    background-color: #282828;
+}
+
+.comment-name {
+    font-weight: bold;
+    color: #d383f8;
+}
+
+.comment-display p {
+    margin-bottom: .33rem;
+}
+
 
 /* Media Queries For Responsive Design */
 @media (max-width: 1200px) {

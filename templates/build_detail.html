@@ -8,10 +8,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 mt-5 mx-auto">
-                <div class=" darkg-bg px-3 pt-3 pb-4 user-border">
+                <!-- Build detail page showcasing all details of a member's build -->
+                <div class="darkg-bg px-3 pt-3 pb-4 user-border mb-3">
                     <h3 class="display-2 mt-3 text-center">{{ build.year }} {{ build.make }} {{ build.model }}</h3>
                     <p class="mb-4 fs-5 text-center">Built by: {{ build.member | title }}</p>
-                    <img src="{{ build.build_image.url }}" alt="Showcase Image of Member Build" class="build-detail-pic mb-3">
+                    <img src="{{ build.build_image.url }}" alt="Showcase Image of Member Build"
+                        class="build-detail-pic mb-3">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <p class="my-auto ms-3">Last updated: {{ build.updated_date }}</p>
                         <div class="card-indicator btn-group my-auto">
@@ -27,6 +29,20 @@
                     <hr>
                     <h2 class="text-center mb-1">Plans / Recommendations:</h2>
                     <p class="muted-text">{{ build.plans | striptags }}</p>
+                </div>
+                <div class="px-3 py-3 mt-3 mb-5 comment-section">
+                    <div class="comment-display px-3 py-2 user-border">
+                        <p class="comment-name">
+                            RyanONeill416
+                            <span class="muted-text comment-date ms-2">
+                                4 days ago
+                            </span>
+                        </p>
+                        <p>
+                            I love this bodykit! Really makes a huge difference
+                            to how the car looks and the color and wheel combo are to die for :)
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
