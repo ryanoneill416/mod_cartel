@@ -38,3 +38,21 @@ class BuildForm(forms.ModelForm):
         self.fields[
                 'plans'
                 ].label = "Future Plans / Recommendations"
+
+
+class CommentForm(forms.ModelForm):
+    """
+    Add Comment Form
+    """
+    class Meta:
+        """
+        Form Fields
+        """
+        model = Comment
+        fields = ('body',)
+
+    def __init__(self, *args, **kwargs):
+        super(CommentForm, self).__init__(*args, **kwargs)
+        self.fields[
+                'body'
+        ].label = ""
