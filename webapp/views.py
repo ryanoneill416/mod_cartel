@@ -101,7 +101,6 @@ class AddBuild(View):
 
         return render(request, "add_build.html", {"build_form": BuildForm()})
 
-    @login_required
     def post(self, request):
         """
         Posting the build after form completion

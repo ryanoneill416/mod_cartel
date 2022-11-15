@@ -22,14 +22,21 @@
                         </div>
                     </div>
                     <h2 class="text-center mb-1"> Build Overview:</h2>
-                    <p class="muted-text">{{ build.overview | striptags }}</p>
+                    <div class="build-details">
+                        {{ build.overview | safe }}
+                    </div>
                     <hr>
                     <h2 class="text-center mb-1">Mods and Specs:</h2>
-                    <p class="muted-text">{{ build.specifications | striptags }}</p>
+                    <div class="build-details">
+                        {{ build.specifications | safe }}
+                    </div>
                     <hr>
                     <h2 class="text-center mb-1">Plans / Recommendations:</h2>
-                    <p class="muted-text">{{ build.plans | striptags }}</p>
+                    <div class="build-details">
+                        {{ build.plans | safe }}
+                    </div>
                 </div>
+                <!-- Comment Section and Ability to post a comment -->
                 <div class="px-3 py-3 mt-3 mb-5 comment-section">
                     <div class="comment-display px-3 py-2 user-border">
                         <p class="comment-name">

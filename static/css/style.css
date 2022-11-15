@@ -422,6 +422,23 @@ form html body {
     width: 100%;
 }
 
+.build-details *:not(h2) {
+    color: #ffff !important;
+    opacity: .925 !important;
+    font-size: .9rem !important;
+}
+
+.build-detail li::marker {
+    color: #ffff;
+}
+
+hr {
+    width: 10%;
+    color: #d383f8;
+    margin: 1.5rem auto;
+    opacity: 1;
+    border: 2.5px solid;
+}
 
 /* Comment Section Styling */
 .comment-display {
