@@ -51,5 +51,9 @@ class Comment(models.Model):
         ordering = ['comment_date']
 
     def __str__(self):
-
+        """ Generates string title """
         return f"Comment: {self.body} by {self.name}"
+
+    def get_absolute_url(self):
+        """ Gets the absolute url of comment """
+        return reverse('build_detail', args=[self.build.slug])

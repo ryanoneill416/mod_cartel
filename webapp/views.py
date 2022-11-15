@@ -69,6 +69,39 @@ class BuildDetail(View):
             }
         )
 
+    def post(self, request, slug):
+        """
+        post request to add a comment to a post
+        """
+
+        queryset = Build.objects.all()
+        build = get_object_or_404(queryset, slug=slug)
+        comments = build.build_comments.order_by('-comment_date')
+        liked = False
+        if build.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.build = build
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            'build_detail.html',
+            {
+                "build": build,
+                "comments": comments,
+                "liked": liked,
+                "comment_form": CommentForm()
+            }
+        )
+
 
 class MyGarage(generic.ListView):
     """

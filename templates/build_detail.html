@@ -52,7 +52,7 @@
                     </div>
                     <div class="comment-display px-3 py-2 mt-3 mb-5 user-border text-center">
                         {% if user.is_authenticated %}
-                        <form method="post mx-auto">
+                        <form method="post">
                             <p>Leave a comment:</p>
                             {{ comment_form | crispy }}
                             {% csrf_token %}
