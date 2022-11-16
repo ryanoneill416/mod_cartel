@@ -38,19 +38,26 @@
                 </div>
                 <!-- Comment Section and Ability to post a comment -->
                 <div class="px-3 py-3 mt-3 mb-5 comment-section">
-                    <div class="comment-display px-3 py-2 user-border">
-                        <p class="comment-name">
-                            RyanONeill416
-                            <span class="muted-text comment-date ms-2">
-                                4 days ago
-                            </span>
-                        </p>
-                        <p>
-                            I love this bodykit! Really makes a huge difference
-                            to how the car looks and the color and wheel combo are to die for :)
-                        </p>
-                    </div>
-                    <div class="comment-display px-3 py-2 mt-3 mb-5 user-border text-center">
+                    <!-- Displays the comment models stored for the specific build -->
+                    {% for comment in comments %}
+                        <div class="comment-display px-3 py-2 user-border mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="comment-name">
+                                    {{ comment.name | title }}
+                                    <span class="muted-text comment-date ms-2">
+                                        {{ comment.comment_date | timesince }} ago
+                                    </span>
+                                </p>
+                                {% if user.is_authenticated and user.is_staff or user.username == comment.name %}
+                                <a href="#" class="comment-del"><i class="fa-solid fa-trash-can"></i></a>
+                                {% endif %}
+                            </div>
+                            <p>
+                                {{ comment.body }}
+                            </p>
+                        </div>
+                    {% endfor %}
+                    <div class="comment-display px-3 py-2 mb-5 user-border text-center">
                         {% if user.is_authenticated %}
                         <form method="post">
                             <p>Leave a comment:</p>

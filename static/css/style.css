@@ -469,6 +469,24 @@ hr {
     font-size: 1.33rem;
 }
 
+.comment-del {
+    font-size: 1.5rem;
+    color: #ffff;
+    transition: color .2s ease-in-out;
+}
+
+.comment-del:hover {
+    color: #d383f8;
+}
+
+.comment-name {
+    font-weight: 900;
+}
+
+.comment-date {
+    font-size: .85rem;
+}
+
 
 /* Media Queries For Responsive Design */
 @media (max-width: 1200px) {
