@@ -10,4 +10,6 @@ urlpatterns = [
     path('delete_build/<int:build_id>',
          views.delete_build, name='delete_build'),
     path('<slug:slug>/', views.BuildDetail.as_view(), name="build_detail"),
+    path('delete_comment/<int:comment_id>',
+         views.delete_comment, name='delete_comment'),
 ]

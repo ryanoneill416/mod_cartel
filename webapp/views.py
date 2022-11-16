@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic import UpdateView
 from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
+from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
 from .models import Build, Comment
 from .forms import BuildForm, CommentForm
@@ -53,7 +54,7 @@ class BuildDetail(View):
 
         queryset = Build.objects.all()
         build = get_object_or_404(queryset, slug=slug)
-        comments = build.build_comments.order_by('-comment_date')
+        comments = build.build_comments.order_by('comment_date')
         liked = False
         if build.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -175,6 +176,19 @@ def delete_build(request, build_id):
     """
     Deletes a specified user build
     """
+
     build = get_object_or_404(Build, id=build_id)
     build.delete()
     return redirect(reverse('my_garage'))
+
+
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Deletes a specified user comment
+    """
+
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    return redirect(reverse(
+        'build_detail', args=[comment.build.slug]))

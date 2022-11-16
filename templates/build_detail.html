@@ -49,7 +49,7 @@
                                     </span>
                                 </p>
                                 {% if user.is_authenticated and user.is_staff or user.username == comment.name %}
-                                <a href="#" class="comment-del"><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="{% url 'delete_comment' comment.id %}" class="comment-del"><i class="fa-solid fa-trash-can"></i></a>
                                 {% endif %}
                             </div>
                             <p>
