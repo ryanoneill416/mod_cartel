@@ -10,7 +10,7 @@
             <div class="col-md-10 mt-5 mx-auto">
                 <!-- Build detail page showcasing all details of a member's build -->
                 <div class="darkg-bg px-3 pt-3 pb-4 user-border mb-3">
-                    <h3 class="display-2 mt-3 text-center">{{ build.year }} {{ build.make }} {{ build.model }}</h3>
+                    <h1 class="display-2 mt-3 text-center">{{ build.year }} {{ build.make }} {{ build.model }}</h1>
                     <p class="mb-4 fs-5 text-center">Built by: {{ build.member | title }}</p>
                     <img src="{{ build.build_image.url }}" alt="Showcase Image of Member Build"
                         class="build-detail-pic mb-3">
@@ -40,22 +40,40 @@
                 <div class="px-3 py-3 mt-3 mb-5 comment-section">
                     <!-- Displays the comment models stored for the specific build -->
                     {% for comment in comments %}
-                        <div class="comment-display px-3 py-2 user-border mb-3">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <p class="comment-name">
-                                    {{ comment.name | title }}
-                                    <span class="muted-text comment-date ms-2">
-                                        {{ comment.comment_date | timesince }} ago
-                                    </span>
+                            <div class="comment-display px-3 py-2 user-border mb-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="comment-name my-auto">
+                                        {{ comment.name | title }}
+                                        <span class="muted-text comment-date ms-2">
+                                            {{ comment.comment_date | timesince }} ago
+                                        </span>
+                                    </p>
+                                    {% if user.is_authenticated and user.is_staff or user.username == comment.name %}
+                                    <a href="#deleteComment{{ comment.id }}" class="comment-del" data-bs-toggle="modal"><i class="fa-solid fa-trash-can"></i></a>
+                                    <!-- Modal for deleting a comment -->
+                                    <div class="modal fade" id="deleteComment{{ comment.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                          <div class="modal-content mx-3">
+                                            <div class="modal-header">
+                                              <h3 class="modal-title" id="staticBackdropLabel">Are you sure?</h3>
+                                              <a href="" data-bs-dismiss="modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></a>
+                                            </div>
+                                            <div class="modal-body">
+                                              <p class="muted-text">This comment will be deleted permanently.
+                                              </p>
+                                            </div>
+                                            <div class="modal-footer mt-1">
+                                              <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger mx-auto">Delete Comment</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <p>
+                                    {{ comment.body }}
                                 </p>
-                                {% if user.is_authenticated and user.is_staff or user.username == comment.name %}
-                                <a href="{% url 'delete_comment' comment.id %}" class="comment-del"><i class="fa-solid fa-trash-can"></i></a>
-                                {% endif %}
                             </div>
-                            <p>
-                                {{ comment.body }}
-                            </p>
-                        </div>
                     {% endfor %}
                     <div class="comment-display px-3 py-2 mb-5 user-border text-center">
                         {% if user.is_authenticated %}

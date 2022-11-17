@@ -370,16 +370,12 @@ form html body {
 
 /* deleteBuild Modal Styling */
 .modal-content {
-    border: 1px solid rgba(255, 255, 255, .85);
+    background-color: #282828;
 }
 
 .modal-header {
     border-bottom: none;
     padding: 1rem 1rem 0;
-}
-
-.modal-header h3 {
-    color: #d383f8;
 }
 
 .btn-close-modal {
@@ -412,10 +408,6 @@ form html body {
 
 
 /* Build Detail Styling  */
-.build-detail h3 {
-    text-decoration: underline .075rem solid #d383f8;
-    text-underline-offset: .5rem;
-}
 
 .build-detail-pic {
     max-height: 37.5vh;
@@ -470,7 +462,7 @@ hr {
 }
 
 .comment-del {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ffff;
     transition: color .2s ease-in-out;
 }
