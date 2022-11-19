@@ -185,6 +185,20 @@ class BuildLike(View):
         return HttpResponseRedirect(reverse('build_detail', args=[slug]))
 
 
+class BuildSave(View):
+    """
+    Ability for a user to save specified builds
+    for future reference
+    """
+
+    def post(self, request, slug):
+        if build.saves.filter(id=request.user.id).exists():
+            build.saves.remove(request.user)
+        else:
+            build.saves.add(request.user)
+        return HttpResponseRedirect(reverse('build_detail', args=[slug]))
+
+
 @login_required
 def delete_build(request, build_id):
     """
