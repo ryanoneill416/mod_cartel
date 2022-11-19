@@ -16,21 +16,34 @@
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <p class="my-auto ms-3">Last updated: {{ build.updated_date }}</p>
                         <div class="card-indicator btn-group my-auto">
-                            <!-- <a href="#"><i class="fa-regular fa-bookmark fs-1 me-3"></i></a> -->
-                                {% if user.is_authenticated %}
+                            <!-- Ability for a user to like the build -->
+                            {% if user.is_authenticated %}
                                 <form class="d-inline" action="{% url 'build_like' build.slug %}" method="POST">
                                     {% csrf_token %}
                                     {% if liked %}
-                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="fa-solid fa-heart" style="color: #d383f8;"></i></button>
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="fa-solid fa-heart me-1" style="color: #ffff;"></i></button>
                                     {% else %}
-                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="far fa-heart" style="color: #ffff;"></i></button>
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="far fa-heart me-1" style="color: #ffff;"></i></button>
                                     {% endif %}
                                 </form>
-                                {% else %}
-                                <span class="text-secondary"><i class="far fa-heart me-1" style="color: #ffff;"></i></span>
-                                {% endif %}
+                            {% else %}
+                                <span><i class="far fa-heart me-1" style="color: #ffff;"></i></span>
+                            {% endif %}
                             <!-- The number of likes goes before the closing strong tag -->
                             <span class="fs-4 my-auto"> {{ build.number_of_likes }}</span>
+                            <!-- Ability for a user to save the build -->
+                            {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'build_save' build.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if saved %}
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like ms-3"><i class="fa-solid fa-bookmark" style="color: #ffff;"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like ms-3"><i class="fa-regular fa-bookmark" style="color: #ffff;"></i></button>
+                                    {% endif %}
+                                </form>
+                            {% else %}
+                            <span><i class="fa-regular fa-bookmark ms-3" style="color: #ffff;"></i></span>
+                            {% endif %}
                         </div>
                     </div>
                     <h2 class="text-center mb-1"> Build Overview:</h2>

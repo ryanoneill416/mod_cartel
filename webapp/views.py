@@ -56,8 +56,11 @@ class BuildDetail(View):
         build = get_object_or_404(queryset, slug=slug)
         comments = build.build_comments.order_by('comment_date')
         liked = False
+        saved = False
         if build.likes.filter(id=self.request.user.id).exists():
             liked = True
+        if build.saves.filter(id=self.request.user.id).exists():
+            saved = True
 
         return render(
             request,
@@ -66,6 +69,7 @@ class BuildDetail(View):
                 "build": build,
                 "comments": comments,
                 "liked": liked,
+                "saved": saved,
                 "comment_form": CommentForm()
             }
         )
@@ -79,8 +83,11 @@ class BuildDetail(View):
         build = get_object_or_404(queryset, slug=slug)
         comments = build.build_comments.order_by('-comment_date')
         liked = False
+        saved = False
         if build.likes.filter(id=self.request.user.id).exists():
             liked = True
+        if build.saves.filter(id=self.request.user.id).exists():
+            saved = True
 
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -99,6 +106,7 @@ class BuildDetail(View):
                 "build": build,
                 "comments": comments,
                 "liked": liked,
+                "saved": saved,
                 "comment_form": CommentForm()
             }
         )
@@ -192,6 +200,7 @@ class BuildSave(View):
     """
 
     def post(self, request, slug):
+        build = get_object_or_404(Build, slug=slug)
         if build.saves.filter(id=request.user.id).exists():
             build.saves.remove(request.user)
         else:
