@@ -432,6 +432,16 @@ hr {
     border: 2.5px solid;
 }
 
+.card-indicator form {
+    background-color: #121212;
+}
+
+.btn-like {
+    background-color: #181818 !important;
+    border: none !important;
+}
+
+
 /* Comment Section Styling */
 .comment-display {
     background-color: #282828;

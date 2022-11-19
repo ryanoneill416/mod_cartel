@@ -3,7 +3,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% if user.is_authenticated %}
 <section class="build-detail">
     <div class="container">
         <div class="row">
@@ -17,8 +16,21 @@
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <p class="my-auto ms-3">Last updated: {{ build.updated_date }}</p>
                         <div class="card-indicator btn-group my-auto">
-                            <a href="#" class="me-3"><i class="fa-regular fa-heart fs-1"></i></a>
-                            <a href="#"><i class="fa-regular fa-bookmark fs-1 me-3"></i></a>
+                            <!-- <a href="#"><i class="fa-regular fa-bookmark fs-1 me-3"></i></a> -->
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'build_like' build.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="fa-solid fa-heart" style="color: #d383f8;"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="far fa-heart" style="color: #ffff;"></i></button>
+                                    {% endif %}
+                                </form>
+                                {% else %}
+                                <span class="text-secondary"><i class="far fa-heart me-1" style="color: #ffff;"></i></span>
+                                {% endif %}
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="fs-4 my-auto"> {{ build.number_of_likes }}</span>
                         </div>
                     </div>
                     <h2 class="text-center mb-1"> Build Overview:</h2>
@@ -77,12 +89,14 @@
                     {% endfor %}
                     <div class="comment-display px-3 py-2 mb-5 user-border text-center">
                         {% if user.is_authenticated %}
-                        <form method="post">
-                            <p>Leave a comment:</p>
-                            {{ comment_form | crispy }}
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-user mb-2">Post</button>
-                        </form>
+                            <form method="post">
+                                <p>Leave a comment:</p>
+                                {{ comment_form | crispy }}
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-user mb-2">Post</button>
+                            </form>
+                        {% else %}
+                        <p class="text-center">If you wish to leave a comment, you must <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Register</a></p>
                         {% endif %}
                     </div>
                 </div>
@@ -91,7 +105,5 @@
     </div>
 </section>
 
-
-{% endif %}
 
 {% endblock %}

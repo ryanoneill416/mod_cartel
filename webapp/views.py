@@ -171,6 +171,20 @@ class EditBuild(UpdateView):
     template_name = 'edit_build.html'
 
 
+class BuildLike(View):
+    """
+    Ability to like and unlike specified builds
+    """
+
+    def post(self, request, slug):
+        build = get_object_or_404(Build, slug=slug)
+        if build.likes.filter(id=request.user.id).exists():
+            build.likes.remove(request.user)
+        else:
+            build.likes.add(request.user)
+        return HttpResponseRedirect(reverse('build_detail', args=[slug]))
+
+
 @login_required
 def delete_build(request, build_id):
     """
