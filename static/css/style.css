@@ -228,6 +228,21 @@ footer i:hover {
     width: 90vw;
 }
 
+.btn-filter {
+    background: linear-gradient(0deg, rgba(64,64,64,1) 0%, rgba(40,40,40,1) 50%);
+    color: #ffff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .33rem 1rem;
+    width: 15%;
+    opacity: .75;
+    transition: opacity .2s ease-in-out;
+}
+
+.btn-filter:hover {
+    opacity: 1;
+}
+
 .showcase-hero {
     background-repeat: no-repeat;
     background-size: cover;

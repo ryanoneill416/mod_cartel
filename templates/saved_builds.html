@@ -25,15 +25,9 @@
                 This is where you'll always find the builds from other members of the community that you've saved! An
                 easy way for you to stay informed and inspired
             </p>
-            {% if user.is_authenticated %}
             <p>
-                <a href="{% url 'add_build' %}" class="btn btn-user">Post My Build</a>
+                <a href="{% url 'showcase' %}" class="btn btn-user">Back to showcase</a>
             </p>
-            {% else %}
-            <p>
-                <a href="{% url 'account_signup' %}" class="btn btn-user">Become a member</a>
-            </p>
-            {% endif %}
         </div>
     </div>
 </section>
