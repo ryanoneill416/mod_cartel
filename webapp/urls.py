@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
      path('', views.Home.as_view(), name='home'),
      path('showcase/', views.Showcase.as_view(), name='showcase'),
+     path('saved_builds/', views.SavedBuilds.as_view(), name='saved_builds'),
      path('my_garage/', views.MyGarage.as_view(), name='my_garage'),
      path('add_build/', views.AddBuild.as_view(), name='add_build'),
      path('edit_build/<int:pk>/',
@@ -15,5 +16,4 @@ urlpatterns = [
           views.delete_comment, name='delete_comment'),
      path('like/<slug:slug>/', views.BuildLike.as_view(), name='build_like'),
      path('save/<slug:slug>/', views.BuildSave.as_view(), name='build_save'),
-     path('saved_builds/', views.SavedBuilds.as_view(), name='saved_builds'),
 ]
