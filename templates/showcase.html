@@ -37,7 +37,9 @@
         </div>
     </div>
     <div class="pt-1">
-        <a href="{% url 'saved_builds' %}" class="btn btn-filter">Saved Builds</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'saved_builds' %}" class="btn btn-filter">Saved Builds</a>
+        {% endif %}
         <a href="{% url 'saved_builds' %}" class="btn btn-filter mx-2">Recently Updated</a>
         <a href="{% url 'saved_builds' %}" class="btn btn-filter">Trending</a>
     </div>
