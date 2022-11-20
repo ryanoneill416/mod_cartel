@@ -14,7 +14,7 @@
                     <img src="{{ build.build_image.url }}" alt="Showcase Image of Member Build"
                         class="build-detail-pic mb-3">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <p class="my-auto ms-3">Last updated: {{ build.updated_date }}</p>
+                        <p class="my-auto ms-3">Last updated: {{ build.updated_date | timesince }}</p>
                         <div class="card-indicator btn-group my-auto">
                             <!-- Ability for a user to like the build -->
                             {% if user.is_authenticated %}

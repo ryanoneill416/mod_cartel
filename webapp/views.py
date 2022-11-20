@@ -40,6 +40,25 @@ class Showcase(generic.ListView):
     paginate_by = 6
 
 
+class SavedBuilds(generic.ListView):
+    """
+    View retrieving all of the user's
+    saved builds
+    """
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            build = Build.objects.filter(saves=request.user.id)
+
+            paginator = Paginator(build, 6)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(
+                request, 'saved_builds.html', {"page_obj": page_obj, })
+        else:
+            return render(request, 'saved_builds.html')
+
+
 class BuildDetail(View):
     """
     View showing all the build details of
