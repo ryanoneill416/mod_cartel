@@ -9,7 +9,7 @@
             <div class="page-hero-image">
                 <div class="text-center position-absolute bottom-0 start-50 translate-middle-x">
                     <h1 class="display-1 hero-heading">
-                        Saved Builds
+                        The Showcase
                     </h1>
                 </div>
             </div>
@@ -18,17 +18,28 @@
 </div>
 
 <!-- Featured Description w/ Call-to-Action -->
-<section class="py-5 text-center container">
+<section class="pt-3 pb-0 text-center container">
     <div class="row pb-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
             <p class="lead muted-text mb-4">
-                This is where you'll always find the builds from other members of the community that you've saved! An
-                easy way for you to stay informed and inspired
+                This is the car meet that you'll never miss! Show off your builds, find inspiration from others and
+                connect with like-minded car enthusiasts globally.
             </p>
+            {% if user.is_authenticated %}
             <p>
-                <a href="{% url 'showcase' %}" class="btn btn-user">Back to showcase</a>
+                <a href="{% url 'add_build' %}" class="btn btn-user">Post My Build</a>
             </p>
+            {% else %}
+            <p>
+                <a href="{% url 'account_signup' %}" class="btn btn-user">Become a member</a>
+            </p>
+            {% endif %}
         </div>
+    </div>
+    <div class="pt-1">
+        <button type="disabled" class="btn-filter-selected">Saved Builds</button>
+        <a href="{% url 'saved_builds' %}" class="btn btn-filter mx-2">Recently Updated</a>
+        <a href="{% url 'saved_builds' %}" class="btn btn-filter">Trending</a>
     </div>
 </section>
 
