@@ -15,4 +15,5 @@ urlpatterns = [
           views.delete_comment, name='delete_comment'),
      path('like/<slug:slug>/', views.BuildLike.as_view(), name='build_like'),
      path('save/<slug:slug>/', views.BuildSave.as_view(), name='build_save'),
+     path('saved_builds/', views.SavedBuilds.as_view(), name='saved_builds'),
 ]
