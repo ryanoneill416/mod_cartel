@@ -38,7 +38,7 @@
     </div>
     <div class="pt-1">
         <button type="disabled" class="btn-filter-selected">Trending</button>
-        <a href="{% url 'showcase' %}" class="btn btn-filter mx-2">Recently Updated</a>
+        <a href="{% url 'showcase' %}" class="btn btn-filter mx-2">All Builds</a>
         {% if user.is_authenticated %}
             <a href="{% url 'saved_builds' %}" class="btn btn-filter">Saved Builds</a>
         {% endif %}
@@ -58,8 +58,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <a href="{% url 'build_detail' build.slug %}" class="build-card-title"><h4 class="my-auto">{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
                             <div class="card-indicator btn-group my-auto">
-                                <a href="#" class="me-3"><i class="fa-regular fa-heart"></i></a>
-                                <a href="#"><i class="fa-regular fa-bookmark"></i></a>
+                                <p class="mb-0 fs-6"><i class="fa-solid fa-clock"></i> {{ build.updated_date | timesince }}</p>
                             </div>
                         </div>
                     </div>
