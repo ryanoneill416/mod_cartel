@@ -38,9 +38,9 @@
     </div>
     <div class="pt-1">
         <!-- Removes button functionality and serves as an indicator as to what was selected by user -->
+        <a href="{% url 'trending_builds' %}" class="btn btn-filter">Trending</a>
+        <a href="{% url 'showcase' %}" class="btn btn-filter mx-2">Recently Updated</a>
         <button type="disabled" class="btn-filter-selected">Saved Builds</button>
-        <a href="{% url 'saved_builds' %}" class="btn btn-filter mx-2">Recently Updated</a>
-        <a href="{% url 'saved_builds' %}" class="btn btn-filter">Trending</a>
     </div>
 </section>
 

@@ -37,8 +37,8 @@
         </div>
     </div>
     <div class="pt-1">
-        <a href="{% url 'trending_builds' %}" class="btn btn-filter">Trending</a>
-        <button type="disabled" class="btn-filter-selected mx-2">Recently Updated</button>
+        <button type="disabled" class="btn-filter-selected">Trending</button>
+        <a href="{% url 'showcase' %}" class="btn btn-filter mx-2">Recently Updated</a>
         {% if user.is_authenticated %}
             <a href="{% url 'saved_builds' %}" class="btn btn-filter">Saved Builds</a>
         {% endif %}
@@ -70,7 +70,4 @@
     </div>
 </div>
 
-{% if is_paginated %}
-    {% include "pagination.html" %}
-{% endif %}
 {% endblock %}

@@ -5,6 +5,8 @@ urlpatterns = [
      path('', views.Home.as_view(), name='home'),
      path('showcase/', views.Showcase.as_view(), name='showcase'),
      path('saved_builds/', views.SavedBuilds.as_view(), name='saved_builds'),
+     path('trending_builds/',
+          views.TrendingBuilds.as_view(), name='trending_builds'),
      path('my_garage/', views.MyGarage.as_view(), name='my_garage'),
      path('add_build/', views.AddBuild.as_view(), name='add_build'),
      path('edit_build/<int:pk>/',

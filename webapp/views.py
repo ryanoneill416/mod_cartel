@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import UpdateView
 from django.contrib.auth.decorators import login_required
+from django.db.models import Count
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
 from django.core.paginator import Paginator
@@ -35,8 +36,21 @@ class Showcase(generic.ListView):
     """
 
     model = Build
-    queryset = Build.objects.order_by('-publish_date')
+    queryset = Build.objects.order_by('-updated_date')
     template_name = 'showcase.html'
+    paginate_by = 6
+
+
+class TrendingBuilds(generic.ListView):
+    """
+    View showcasing the most liked
+    six builds at that moment
+    """
+
+    model = Build
+    queryset = Build.objects.annotate(
+        like_count=Count('likes')).order_by('-like_count')
+    template_name = 'trending_builds.html'
     paginate_by = 6
 
 
