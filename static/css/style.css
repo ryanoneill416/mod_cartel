@@ -139,12 +139,12 @@ h3 {
 
 
 /* Footer Styling */
-.footer-container {
+/* .footer-container {
     margin-top: auto;
 }
 
 footer {
-    color: #333333;
+    background-color: #121212;
 }
 
 footer i {
@@ -155,8 +155,28 @@ footer i {
 
 footer i:hover {
     color: #7d0ab3;
+} */
+
+.footer-container {
+    background-color: #212121; 
 }
 
+.footer-container * {
+    color: #ffff;
+}
+
+.footer-container ul a {
+    font-size: 2rem;
+}
+
+.copyright a {
+    color: #d383f8;
+    transition: color .2s ease-in-out;
+}
+
+.copyright a:hover {
+    color: grey;
+}
 
 /* Login/Logout/Sign-Up Page Styling */
 .user-page {

@@ -13,7 +13,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/c11f73347e.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -44,13 +45,15 @@
                         </a>
                     </li>
                     <li class="ms-2">
-                        <a href="{% url 'showcase' %}" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
+                        <a href="{% url 'showcase' %}" class="nav-link menu-nav-link" aria-current="page"
+                            aria-label="Go to the home page">
                             SHOWCASE
                         </a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="ms-2">
-                        <a href="{% url 'my_garage' %}" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
+                        <a href="{% url 'my_garage' %}" class="nav-link menu-nav-link" aria-current="page"
+                            aria-label="Go to the home page">
                             MY GARAGE
                         </a>
                     </li>
@@ -80,7 +83,7 @@
     {% endblock content %}
 
     <!-- Footer -->
-    <div class="container-fluid white-bg footer-container">
+    <!-- <div class="container-fluid white-bg footer-container">
         <footer class="py-4 ">    
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                     <p>© Mod Cartel 2022 | Educational Purposes</p>
@@ -97,6 +100,33 @@
                     </ul>
                   </div>
         </footer>
+    </div> -->
+    <div class="footer-container container-fluid mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center pt-5">
+                <h2 class="footer-heading"><a href="#" class="logo">Build . Inspire . Connect</a></h2>
+                <p class="menu">
+                    <a href="#" class="menu-nav-link mx-1">Home</a>
+                    <a href="#" class="menu-nav-link mx-1">Events</a>
+                    <a href="#" class="menu-nav-link mx-1">Showcase</a>
+                    <a href="#" class="menu-nav-link mx-1">My Garage</a>
+                </p>
+                <ul class="list-unstyled">
+                    <a href="https://www.instagram.com/modcartel/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com" class="mx-2">
+                        <i class="fab fa-youtube social-link"></i>
+                    </a>
+                    <a href="https://www.tiktok.com">
+                        <i class="fab fa-tiktok social-link"></i>
+                    </a>
+                </ul>
+                <hr style="color: #d383f8;">
+                <p class="copyright py-3">
+                    Copyright © 2022 All rights reserved | Made by <a href="https://www.linkedin.com/in/ryan-o-neill-76001522a/" target="_blank">ryanoneill416</a> :)
+                </p>
+            </div>
     </div>
 
     <!-- Bootstrap JS Script -->
