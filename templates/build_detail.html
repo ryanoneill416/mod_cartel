@@ -6,10 +6,10 @@
 <section class="build-detail">
     <div class="container">
         <div class="row">
-            <div class="col-md-10 mt-5 mx-auto">
+            <div class="col-md-10 mt-3 mx-auto">
                 <!-- Build detail page showcasing all details of a member's build -->
                 <div class="darkg-bg px-3 pt-3 pb-4 user-border mb-3">
-                    <h1 class="display-2 mt-3 text-center">{{ build.year }} {{ build.make }} {{ build.model }}</h1>
+                    <h1 class="display-5 mt-3 text-center">{{ build.year }} {{ build.make }} {{ build.model }}</h1>
                     <p class="mb-4 fs-5 text-center">Built by: {{ build.member | title }}</p>
                     <img src="{{ build.build_image.url }}" alt="Showcase Image of Member Build"
                         class="build-detail-pic mb-3">
