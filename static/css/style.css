@@ -258,6 +258,14 @@ h3 {
 }
 
 
+/* Home Page Styling */
+.carousel, .carousel-item {
+    height: 600px;
+    max-height: 70vh;
+    width: 100vw;
+}
+
+
 /* 'Showcase' Page styling */
 .hero-heading {
     width: 90vw;
@@ -762,12 +770,12 @@ hr {
         font-size: 1.1rem;
     }
 
-    .footer-heading {
-        font-size: 2rem;
-    }
-
     .foot-link {
         font-size: 1rem;
+    }
+
+    .footer-heading {
+        font-size: 2.05rem;
     }
 
     .footer-container .menu span {
