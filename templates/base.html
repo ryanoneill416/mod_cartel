@@ -83,39 +83,26 @@
     {% endblock content %}
 
     <!-- Footer -->
-    <!-- <div class="container-fluid white-bg footer-container">
-        <footer class="py-4 ">    
-                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                    <p>© Mod Cartel 2022 | Educational Purposes</p>
-                    <ul class="list-unstyled d-flex">
-                        <a href="https://www.instagram.com/modcartel/">
-                            <i class="fab fa-instagram ms-3"></i>
-                        </a>
-                        <a href="https://www.youtube.com">
-                            <i class="fab fa-youtube ms-3 social-link"></i>
-                        </a>
-                        <a href="https://www.tiktok.com">
-                            <i class="fab fa-tiktok ms-3 social-link"></i>
-                        </a>
-                    </ul>
-                  </div>
-        </footer>
-    </div> -->
-    <div class="footer-container container-fluid mt-3">
+    <div class="footer-container container-fluid mt-3 mt-auto">
         <div class="row justify-content-center">
             <div class="col-md-12 text-center pt-5">
-                <h2 class="footer-heading"><a href="#" class="logo">Build . Inspire . Connect</a></h2>
-                <p class="menu">
-                    <a href="#" class="menu-nav-link mx-1">Home</a>
-                    <a href="#" class="menu-nav-link mx-1">Events</a>
-                    <a href="#" class="menu-nav-link mx-1">Showcase</a>
-                    <a href="#" class="menu-nav-link mx-1">My Garage</a>
+                <h2 class="footer-heading">Build<span>.</span>Inspire<span>.</span>Connect</h2>
+                <p class="menu mb-4">
+                    <a href="{% url 'home' %}" class="foot-link mx-1">HOME</a>
+                    <span>|</span>
+                    <a href="{% url 'showcase' %}" class="foot-link mx-1">SHOWCASE</a>
+                    <span>|</span>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'my_garage' %}" class="foot-link mx-1">MY GARAGE</a>
+                    {% else %}
+                        <a href="{% url 'account_login' %}" class="foot-link mx-1">LOGIN</a>
+                    {% endif %}
                 </p>
                 <ul class="list-unstyled">
                     <a href="https://www.instagram.com/modcartel/">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.youtube.com" class="mx-2">
+                    <a href="https://www.youtube.com" class="mx-4">
                         <i class="fab fa-youtube social-link"></i>
                     </a>
                     <a href="https://www.tiktok.com">
@@ -123,7 +110,7 @@
                     </a>
                 </ul>
                 <hr style="color: #d383f8;">
-                <p class="copyright py-3">
+                <p class="copyright pb-3 muted-text">
                     Copyright © 2022 All rights reserved | Made by <a href="https://www.linkedin.com/in/ryan-o-neill-76001522a/" target="_blank">ryanoneill416</a> :)
                 </p>
             </div>

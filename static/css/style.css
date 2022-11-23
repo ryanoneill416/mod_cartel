@@ -139,34 +139,50 @@ h3 {
 
 
 /* Footer Styling */
-/* .footer-container {
-    margin-top: auto;
-}
-
-footer {
-    background-color: #121212;
-}
-
-footer i {
-    font-size: 2rem;
-    color: #d383f8;
-    transition: 0.35s;
-}
-
-footer i:hover {
-    color: #7d0ab3;
-} */
-
 .footer-container {
-    background-color: #212121; 
+    background-color: #191919;
 }
 
-.footer-container * {
-    color: #ffff;
+.footer-container ul i {
+    font-size: 2.75rem;
 }
 
 .footer-container ul a {
-    font-size: 2rem;
+    color: #ffff;
+    transition: .2s ease-in-out color;
+}
+
+.footer-container ul a:hover {
+    color: #d383f8;
+}
+
+.footer-container .menu, .footer-container .menu span {
+    font-size: 1.5rem !important;
+}
+
+.foot-link {
+    font-family: 'Montserrat';
+    font-size: 1.25rem;
+    color: #ffff;
+    opacity: .7;
+    transition: opacity .2s ease-in-out;
+}
+
+.foot-link:hover {
+    opacity: 1 !important;
+    color: #ffff;
+}
+
+.footer-heading {
+    font-size: 2.5rem;
+    color: #ffff;
+    letter-spacing: .2rem;
+}
+
+.footer-heading span {
+    font-size: 2.5rem;
+    color: #d383f8;
+    margin: 0 0.25rem;
 }
 
 .copyright a {
@@ -175,7 +191,7 @@ footer i:hover {
 }
 
 .copyright a:hover {
-    color: grey;
+    color: white;
 }
 
 /* Login/Logout/Sign-Up Page Styling */
