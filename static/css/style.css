@@ -439,6 +439,7 @@ form html body {
 /* deleteBuild Modal Styling */
 .modal-content {
     background-color: #282828;
+    max-width: 85vw;
 }
 
 .modal-header {
@@ -689,7 +690,7 @@ hr {
         font-size: .85rem !important;
     }
 
-    .comment-section * {
+    .comment-section .comment-display {
         font-size: .825rem !important;
     }
 
@@ -718,6 +719,14 @@ hr {
     .user-page p {
         font-size: 1rem;
     }
+
+    .modal-header h3, .modal-header a {
+        font-size: 1.75rem;
+    }
+
+    .modal-body p {
+        font-size: .9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -737,10 +746,6 @@ hr {
 @media (max-width: 450px) {
     .card {
         height: 300px;
-    }
-    
-    .add_build_form p {
-        font-size: 1.05rem;
     }
 
     .lead {
