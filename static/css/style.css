@@ -600,6 +600,26 @@ hr {
     .comment-section textarea {
         font-size: .875rem;
     }
+
+    .footer-heading {
+        font-size: 2.25rem;
+    }
+
+    .foot-link {
+        font-size: 1.1rem;
+    }
+
+    .footer-container .menu span {
+        font-size: 1.25rem !important;
+    }
+
+    .footer-container ul i {
+        font-size: 2.25rem;
+    }
+
+    .copyright {
+        font-size: .875rem;
+    }
 }
 
 @media (max-width: 770px) {
@@ -715,6 +735,22 @@ hr {
 
     .pagination .btn-user {
         font-size: 1.1rem;
+    }
+
+    .footer-heading {
+        font-size: 2rem;
+    }
+
+    .foot-link {
+        font-size: 1rem;
+    }
+
+    .footer-container .menu span {
+        font-size: 1.15rem !important;
+    }
+
+    .copyright {
+        font-size: .85rem;
     }
 }
 
