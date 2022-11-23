@@ -12,7 +12,7 @@
       <div class="col-md-7 mx-auto px-auto">
         <form class="user-border pt-3 pb-4" method="POST" action="{% url 'account_login' %}">
           <img class="my-3" src="{% static 'images/mc-logo-w-removebg-preview.png' %}" alt="Mod Cartel 'MC' Logo" width="150px" height="150px">
-          <h3>{% trans "Sign In" %}</h3>
+          <h3>{% trans "Welcome Back!" %}</h3>
           <p class="mb-4 muted-text">{% blocktrans %}Not a member? Sign up <a href="{{ signup_url }}">here</a>{% endblocktrans %}</p>
           {% csrf_token %}
           {{ form.as_p }}
