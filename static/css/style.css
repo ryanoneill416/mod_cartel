@@ -260,9 +260,15 @@ h3 {
 
 /* Home Page Styling */
 .carousel, .carousel-item {
-    height: 600px;
+    height: 30vh;
     max-height: 70vh;
     width: 100vw;
+}
+
+.carousel-item img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
