@@ -29,14 +29,14 @@ h2 {
 }
 
 h3 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue';
     font-size: 2.15rem;
     letter-spacing: .66px;
     color: #ffff;
 }
 
 h4 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue';
     font-size: 1.8rem;
     letter-spacing: .66px;
     color: rgba(255, 255, 255, 0.9);
@@ -259,16 +259,28 @@ h3 {
 
 
 /* Home Page Styling */
+.home-head {
+    color: #d383f8;
+    text-align: center;
+}
+
 .carousel, .carousel-item {
-    height: 30vh;
+    height: 33vh;
     max-height: 70vh;
     width: 100vw;
+    min-height: 300px;
 }
 
 .carousel-item img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.featurette_image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 
@@ -574,6 +586,14 @@ hr {
 
 
 /* Media Queries For Responsive Design */
+@media (min-width: 1400px) {
+    .carousel, .carousel-item {
+        height: 45vh;
+        max-height: 70vh;
+        width: 100vw;
+    }
+}
+
 @media (max-width: 1200px) {
     .card {
         max-width: none;
