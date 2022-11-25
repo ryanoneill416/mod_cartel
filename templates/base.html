@@ -40,20 +40,20 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto">
                     <li class="ms-2">
-                        <a href="#" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
-                            EVENTS
+                        <a href="{% url 'home' %}" class="nav-link menu-nav-link" aria-current="page" aria-label="Go to the home page">
+                            HOME
                         </a>
                     </li>
                     <li class="ms-2">
                         <a href="{% url 'showcase' %}" class="nav-link menu-nav-link" aria-current="page"
-                            aria-label="Go to the home page">
+                            aria-label="Go to the showcase page">
                             SHOWCASE
                         </a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="ms-2">
                         <a href="{% url 'my_garage' %}" class="nav-link menu-nav-link" aria-current="page"
-                            aria-label="Go to the home page">
+                            aria-label="Go to my garage page">
                             MY GARAGE
                         </a>
                     </li>

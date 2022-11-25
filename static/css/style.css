@@ -87,10 +87,14 @@ h3 {
     font-size: 1.65rem;
     letter-spacing: .66px;
     color: #FBFAF5;
+    opacity: .85;
+    transition: opacity .2s ease-in-out;
+
 }
 
 .menu-nav-link:hover {
-    color: #d383f8;
+    color: #ffff;
+    opacity: 1;
 }
 
 .user-link {
@@ -98,29 +102,31 @@ h3 {
     font-size: 1.4rem;
     letter-spacing: .5px;
     color: #d383f8;
+    transition: color .2s ease-in-out;
 }
 
 .user-link:hover {
-    color: #FBFAF5;
+    color: #ffff;
 }
 
 .login-link {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
     letter-spacing: .5px;
-    color: #FBFAF5;
+    color: #ffff;
     opacity: 0.75;
+    transition: opacity .2s ease-in-out;
 }
 
 .login-link:hover {
-    color: #FBFAF5;
+    color: #ffff;
     opacity: 1;
 }
 
 .nav-divider {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
-    color: #FBFAF5;
+    color: #ffff;
 }
 
 .navbar-toggler:focus {
@@ -133,7 +139,7 @@ h3 {
 
 .navbar-toggler {
     font-size: 2rem;
-    color: #FBFAF5;
+    color: #ffff;
     background-color: transparent;
     border: none;
 }
@@ -238,7 +244,7 @@ h3 {
 
 .btn-user {
     background-color: #d383f8;
-    color: #FBFAF5;
+    color: #ffff;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -623,6 +629,11 @@ hr {
 
     .comment-section {
         font-size: .875rem;
+    }
+
+    .featurette-image {
+        height: 90% !important;
+        width: 90% !important;
     }
 }
 
