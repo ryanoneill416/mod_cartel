@@ -831,3 +831,14 @@ hr {
         font-size: .75rem !important;
     }
 }
+
+@media (max-width: 350px) {
+    .footer-heading {
+        font-size: 1.9rem;
+    }
+
+    .nav-logo {
+        width: 210px;
+        height: 70px;
+    }
+}
