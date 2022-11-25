@@ -8,11 +8,14 @@ class BuildAdmin(SummernoteModelAdmin):
     """
     Registers Buid model in admin panel
     """
-    summernote_fields = ('overview', 'specifications', 'plans', 'featured_excerpt')
+    summernote_fields = ('overview', 'specifications', 'plans',
+                         'featured_excerpt')
     prepopulated_fields = {'slug': ('member', 'year', 'make', 'model')}
-    list_display = ('member', 'year', 'make', 'model', 'publish_date', 'is_featured')
+    list_display = ('member', 'year', 'make', 'model', 'publish_date',
+                    'is_featured')
     list_filter = ('publish_date', 'is_featured', 'updated_date', 'year')
     search_fields = ['make', 'model', 'year']
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

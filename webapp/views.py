@@ -22,7 +22,7 @@ class Home(View):
         with the featured posts included
         """
 
-        featured_builds = Build.objects.filter(is_featured=True)[:4]
+        featured_builds = Build.objects.filter(is_featured=True)[:2]
         context = {
             "featured_builds": featured_builds,
         }

@@ -59,7 +59,7 @@
 
 <!-- Describing the application w/ accompanying image -->
 <div class="container">
-    <div class="row mt-5">
+    <div class="row py-lg-0 py-md-3">
         <div class="col-lg-7 text-center my-auto">
             <h2 class="display-3">This is mod cartel.</h2>
             <p class="lead muted-text mb-3">Post your builds, search for
@@ -81,34 +81,19 @@
 <div class="py-5 mb-5">
     <div class="container px-3 showcase-container">
         <div class="row row-cols-1 row-cols-xl-2 g-5 align-items-stretch">
+            {% for build in featured_builds %}
             <div class="col">
                 <div class="card">
-                    <a href="#" class="showcase-image"
-                        style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('https://res.cloudinary.com/dgxr5lnrt/image/upload/v1669314481/ivan-sean-y3Cumr6OpnU-unsplash_naiewc.jpg');">
+                    <a href="{% url 'build_detail' build.slug %}" class="showcase-image" style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('{{ build.build_image.url }}');">
                     </a>
                     <div class="card-body">
-                        <div class="align-items-center">
-                            <a href="#" class="build-card-title">
-                                <h4 class="my-auto"> Ryanoneill416's Toyota supra mk4</h4>
-                            </a>
+                        <div class="text-center">
+                            <a href="{% url 'build_detail' build.slug %}" class="build-card-title"><h4 class="my-auto">{{ build.member }}'s {{ build.make }} {{ build.model }}</h4></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <a href="#" class="showcase-image"
-                        style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('https://res.cloudinary.com/dgxr5lnrt/image/upload/v1669314481/ivan-sean-y3Cumr6OpnU-unsplash_naiewc.jpg');">
-                    </a>
-                    <div class="card-body">
-                        <div class="align-items-center">
-                            <a href="#" class="build-card-title">
-                                <h4 class="my-auto"> Ryanoneill416's Toyota supra mk4</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
