@@ -3,81 +3,97 @@
 {% block content %}
 {% if user.is_authenticated %}
 
-<!-- Hero Image w/ Showcase Title -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="garage-hero position-relative">
-            <div class="page-hero-image">
-                <div class="text-center position-absolute bottom-0 start-50 translate-middle-x">
-                    <h1 class="display-1 hero-heading">
-                        My Garage
-                    </h1>
+    <!-- Hero Image w/ Showcase Title -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="garage-hero position-relative">
+                <div class="page-hero-image">
+                    <div class="text-center position-absolute bottom-0 start-50 translate-middle-x">
+                        <h1 class="display-1 hero-heading">
+                            My Garage
+                        </h1>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Featured Description w/ Call-to-Action -->
-<section class="pt-5 text-center container">
-    <div class="row pb-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-            <p class="lead muted-text mb-4">
-                The one place you can store your past and present car collection without worrying about rent ;) Here, you can manage, edit and add new builds as you please.
-            </p>
-            <p>
-                <a href="{% url 'add_build' %}" class="btn btn-user">Add New Build</a>
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- All Builds Posted By User -->
-<div class="py-5">
-    <div class="container px-3 showcase-container">
-
-        <div class="row row-cols-1 row-cols-xl-2 g-5 align-items-stretch">
-            {% for build in page_obj %}
-            <div class="col">
-                    <!-- Shows all builds that the signed in user has posted -->
-                    <div class="card">
-                        <a href="{% url 'build_detail' build.slug %}" class="showcase-image" style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('{{ build.build_image.url }}');">
-                        </a>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="{% url 'build_detail' build.slug %}" class="build-card-title"><h4 class="my-auto">{{ build.make }} {{ build.model }}</h4></a>
-                                <div class="card-indicator btn-group my-auto">
-                                    <a href="{% url 'edit_build' build.id %}" class="me-3"><i class="fa-regular fa-pen-to-square"></i></a>
-                                    <a href="#deleteBuild{{ build.id }}" data-bs-toggle="modal"><i class="fa-solid fa-trash-can"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Delete Build Clarification Modal -->
-                        <div class="modal fade" id="deleteBuild{{ build.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content darkg-bg mx-3">
-                                <div class="modal-header">
-                                  <h3 class="modal-title" id="staticBackdropLabel">Are you sure?</h3>
-                                  <a href="" data-bs-dismiss="modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></a>
-                                </div>
-                                <div class="modal-body">
-                                  <p class="muted-text">
-                                    All evidence of your dope {{ build.make }} {{ build.model }}'s existence will be erased permanently.
-                                  </p>
-                                </div>
-                                <div class="modal-footer mt-1">
-                                  <a href="{% url 'delete_build' build.id %}" class="btn btn-danger mx-auto mt-2">Delete Build</a>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Featured Description w/ Call-to-Action -->
+    <section class="pt-5 text-center container">
+        <div class="row pb-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <p class="lead muted-text mb-4">
+                    The one place you can store your past and present car collection without worrying about rent ;) Here, you can manage, edit and add new builds as you please.
+                </p>
+                <p>
+                    <a href="{% url 'add_build' %}" class="btn btn-user">Add New Build</a>
+                </p>
             </div>
-            {% endfor %}
+        </div>
+    </section>
+
+    <!-- All Builds Posted By User -->
+    <div class="py-5">
+        <div class="container px-3 showcase-container">
+
+            <div class="row row-cols-1 row-cols-xl-2 g-5 align-items-stretch">
+                {% for build in page_obj %}
+                <div class="col">
+                        <!-- Shows all builds that the signed in user has posted -->
+                        <div class="card">
+                            <a href="{% url 'build_detail' build.slug %}" class="showcase-image" style="background-image: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(255,255,255,0) 15%), url('{{ build.build_image.url }}');">
+                            </a>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="{% url 'build_detail' build.slug %}" class="build-card-title"><h4 class="my-auto">{{ build.make }} {{ build.model }}</h4></a>
+                                    <div class="card-indicator btn-group my-auto">
+                                        <a href="{% url 'edit_build' build.id %}" class="me-3"><i class="fa-regular fa-pen-to-square"></i></a>
+                                        <a href="#deleteBuild{{ build.id }}" data-bs-toggle="modal"><i class="fa-solid fa-trash-can"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Delete Build Clarification Modal -->
+                            <div class="modal fade" id="deleteBuild{{ build.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content darkg-bg mx-3">
+                                    <div class="modal-header">
+                                    <h3 class="modal-title" id="staticBackdropLabel">Are you sure?</h3>
+                                    <a href="" data-bs-dismiss="modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></a>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p class="muted-text">
+                                        All evidence of your dope {{ build.make }} {{ build.model }}'s existence will be erased permanently.
+                                    </p>
+                                    </div>
+                                    <div class="modal-footer mt-1">
+                                    <a href="{% url 'delete_build' build.id %}" class="btn btn-danger mx-auto mt-2">Delete Build</a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
-</div>
-{% include "pagination.html" %}
+    {% include "pagination.html" %}
+
+{% else %}
+
+    <section class="user-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mt-2 mx-auto text-center add_build_form">
+                    <div class="darkg-bg py-5 user-border">
+                        <h1>Access Denied</h1>
+                        <p>In order to access this page, please log in <a href="{% url 'account_login' %}">here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 {% endif %}
 {% endblock %}
