@@ -193,7 +193,9 @@ class AddBuild(View):
                                            build.make, build.model]),
                                  allow_unicode=False)
             build.save()
-            return redirect('showcase')
+            messages.success(request,
+                             'The build has been created successfully')
+            return redirect('my_garage')
         else:
             build_form = BuildForm()
 
