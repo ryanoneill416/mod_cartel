@@ -216,7 +216,6 @@ class EditBuild(SuccessMessageMixin, UpdateView):
     success_message = 'The build has been updated successfully'
 
 
-
 class BuildLike(View):
     """
     Ability to like and unlike specified builds
@@ -254,6 +253,7 @@ def delete_build(request, build_id):
 
     build = get_object_or_404(Build, id=build_id)
     build.delete()
+    messages.success(request, 'The build has been successfully deleted')
     return redirect(reverse('my_garage'))
 
 
