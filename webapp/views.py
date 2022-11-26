@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import UpdateView
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import Count
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
@@ -203,7 +205,7 @@ class AddBuild(View):
             )
 
 
-class EditBuild(UpdateView):
+class EditBuild(SuccessMessageMixin, UpdateView):
     """
     View for editing a user's build
     """
@@ -211,6 +213,8 @@ class EditBuild(UpdateView):
     model = Build
     form_class = BuildForm
     template_name = 'edit_build.html'
+    success_message = 'The build has been updated successfully'
+
 
 
 class BuildLike(View):
