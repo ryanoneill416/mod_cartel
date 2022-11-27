@@ -9,7 +9,8 @@ class Build(models.Model):
     make = models.CharField(max_length=15)
     model = models.CharField(max_length=15)
     slug = models.SlugField(max_length=200, unique=True)
-    member = models.ForeignKey(User, on_delete=models.CASCADE, related_name="member_builds")
+    member = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name="member_builds")
     updated_date = models.DateTimeField(auto_now=True)
     year = models.PositiveSmallIntegerField()
     overview = models.TextField()
@@ -19,8 +20,10 @@ class Build(models.Model):
     publish_date = models.DateTimeField(auto_now_add=True)
     is_featured = models.BooleanField(default=False)
     featured_excerpt = models.CharField(max_length=300, blank=True)
-    likes = models.ManyToManyField(User, related_name="build_likes", blank=True)
-    saves = models.ManyToManyField(User, related_name="build_saves", blank=True)
+    likes = models.ManyToManyField(User, related_name="build_likes",
+                                   blank=True)
+    saves = models.ManyToManyField(User, related_name="build_saves",
+                                   blank=True)
 
     class Meta:
         """ Model is ordered in descending date order """
@@ -41,7 +44,8 @@ class Build(models.Model):
 
 class Comment(models.Model):
     """ Model for comments made by members """
-    build = models.ForeignKey(Build, on_delete=models.CASCADE, related_name="build_comments")
+    build = models.ForeignKey(Build, on_delete=models.CASCADE,
+                              related_name="build_comments")
     name = models.CharField(max_length=80)
     body = models.TextField()
     comment_date = models.DateTimeField(auto_now_add=True)
