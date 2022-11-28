@@ -592,6 +592,14 @@ hr {
 
 
 /* Media Queries For Responsive Design */
+@media (min-width: 1850px) {
+    .carousel, .carousel-item {
+        height: 65vh !important;
+        max-height: 75vh;
+        width: 100vw;
+    }
+}
+
 @media (min-width: 1400px) {
     .carousel, .carousel-item {
         height: 45vh;
