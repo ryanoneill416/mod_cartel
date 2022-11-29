@@ -20,19 +20,16 @@
    - [Desktop Navigation](#desktop-navigation)
    - [Mobile Navigation](#mobile-navigation)
    - [Add Build Functionality](#add-build)
+   - [Member Showcase](#showcase)
    - [Build Details](#build-details)
    - [Build Comments Section](#build-comments-section)
-   - [Saved Builds](#saved-builds)
-   - [Trending Builds](#trending-builds)
    - [My Garage](#my-garage)
    - [Future Features](#future-features)
-- [Technologies](#technologies)
+- [Technology](#technology)
    - [Languages](#languages)
-   - [Django Packages](#django-packages)
-   - [Frameworks & Libraries](#frameworks)
-- [Development & Testing](#testing)
-   - [Database](#database)
-   - [Automated Testing](#testing)
+   - [Frameworks / Libraries / Programs](#frameworks)
+- [Testing](#testing)
+   - [Automated Testing](#automated-testing)
    - [Code validation](#code-validation)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -184,6 +181,18 @@ Showcase (Mobile):
 
 <img src="docs/readme_images/add-build-page.png">
 
+<h2 id="showcase">Member Showcase</h2>
+
+- The 'Showcase' page is where all of the builds posted by community members are found.
+- The 'Showcase' page has three filters with the 'All Builds' filter being selected by default.
+- The 'Trending Builds' filter will reveal the top 6 liked member builds at that moment in time.
+- The 'Saved Builds' filter is only visible to authenticated members and serves as a means of storing the builds the member has saved.
+- Each build has it's own card outlining the build, while also acts as a call-to-action to access the 'Build Detail' page of that build.
+- The 'Showcase' page is paginated by 6 to allow for large and clear showcasing of community builds.
+
+<img src="docs/readme_images/showcase-1.png">
+<img src="docs/readme_images/showcase-2.png">
+
 <h2 id="build-details">Build Details Page</h2>
 
 - The applications 'Build Detail' page provides an inside look into the user build beyond picture, make and model.
@@ -193,4 +202,79 @@ Showcase (Mobile):
 - it is on this page that members can post comments giving feedback or to ask questions etc.
 
 <img src="docs/readme_images/build-details-1.png">
-<img src="docs/readme_images/build-details-2.png">
+
+<h2 id="build-comments-section">Build Comments Section</h2>
+
+- The comment section allows all Mod Cartel members to engage with a members posted build.
+- Comments posted have an option of deletion for the creator of the comment.
+- Users with admin roles or staff functionality have the deletion option for all comments.
+- This alleviates the time it would take to use the admin panel solely to do so.
+
+<img src="docs/readme_images/comment-section.png">
+
+<h2 id="my-garage">My Garage</h2>
+
+- The 'My Garage' page is exclusive to authenticated users.
+- This page features an 'Add Build' call to action and a place where all of the users posted builds are stored.
+- Users can use this page to post a new build.
+- Users can edit their builds to amend mistakes and/or update the current status of their build.
+- Users can also delete their builds if they no longer want it to exist.
+
+<img src="docs/readme_images/my-garage-1.png">
+<img src="docs/readme_images/my-garage-2.png">
+
+<h2 id="future-features">Future Features</h2>
+
+- Fully functional events page allowing users to comment on, like and register for IRL community events worldwide.
+- Implementation of social login allowing users ease of registration using their existing social accounts.
+- Password reset functionality before and after logging in.
+- Implementation of a store for merchandise when I have the knowledge of implementing such a feature.
+- Scope for a real mobile application to be built, and for this to be a larger project I'm interested in doing to further my studies and knowledge.
+
+<a href="#top">Back to Table of Contents</a>
+
+<h1 id="technology">Technology</h1>
+
+<h2 id="languages">Languages</h2>
+
+- [HTML 5](https://en.wikipedia.org/wiki/HTML/)
+- [CSS 3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://www.javascript.com/)
+- [Python](https://www.python.org/)
+- [Django](https://www.djangoproject.com/)
+
+<h2 id="frameworks">Frameworks / Libraries / Programs</h2>
+
+- [Git](https://git-scm.com/)<br>
+   Used for version control alongside GitHub.
+- [GitHub](https://github.com/)<br>
+   Used in conjunction with Gitpod as the code editor, to store the project and utilise git version control.
+- [Heroku](https://id.heroku.com)<br>
+   Used to deploy and host the finished product.
+- [Cloudinary](https://cloudinary.com/)<br>
+   Used as cloud based storage, storing any submitted media in the deployed application.
+- [ElephantSQL](https://www.elephantsql.com/)<br>
+   Used to host the PostgreSQL database for the application.
+- [W3C - HTML](https://validator.w3.org/)<br>
+   Used to validate all HTML code.
+- [W3C - CSS](https://jigsaw.w3.org/css-validator/)<br>
+   Used to validate all CSS code.
+- [PEP8](http://pep8online.com/)<br>
+   Used to validate all Python code.
+- [Google Fonts](https://fonts.google.com/)<br>
+   Used to provide the fonts used in application styling.
+- [Bootstrap](https://getbootstrap.com/)<br>
+   Used to aid implementation of styling and responsiveness.
+- [Fontawesome](https://fontawesome.com/)<br>
+   Used to implement effective icons.
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)<br>
+   Used during the development to debug and test responsiveness.
+- [Balsamiq](https://balsamiq.com/)<br>
+   Used to build both the database schema diagram and design wireframes.
+
+<a href="#top">Back to Table of Contents</a>
+
+<h1 id="testing">Testing</h1>
+
+View the results of automated testing, code validation and others [here](TESTING.md).
+
