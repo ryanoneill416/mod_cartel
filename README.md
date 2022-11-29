@@ -171,14 +171,6 @@ Showcase (Mobile):
 
 <img src="docs/readme_images/add-build-page.png">
 
-<h2 id="add-build">Add Build Functionality</h2>
-
-- The applications 'Add Build' functionality allows authenticated members to post their own builds to the database.
-- Once the form is completed successfully, this build will be added to 'The Showcase'.
-- It will also then appear in members own 'My Garage' page, where it can be edited and deleted.
-
-<img src="docs/readme_images/add-build-page.png">
-
 <h2 id="showcase">Member Showcase</h2>
 
 - The 'Showcase' page is where all of the builds posted by community members are found.
