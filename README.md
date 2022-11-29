@@ -29,8 +29,6 @@
    - [Languages](#languages)
    - [Frameworks / Libraries / Programs](#frameworks)
 - [Testing](#testing)
-   - [Automated Testing](#automated-testing)
-   - [Code validation](#code-validation)
 - [Deployment](#deployment)
 - [Credits](#credits)
 
