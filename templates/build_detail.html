@@ -21,24 +21,24 @@
                                 <form class="d-inline" action="{% url 'build_like' build.slug %}" method="POST">
                                     {% csrf_token %}
                                     {% if liked %}
-                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="fa-solid fa-heart me-1" style="color: #ffff;"></i></button>
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="fa-solid fa-heart" style="color: #ffff;"></i></button>
                                     {% else %}
-                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="far fa-heart me-1" style="color: #ffff;"></i></button>
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like"><i class="far fa-heart" style="color: #ffff;"></i></button>
                                     {% endif %}
                                 </form>
                             {% else %}
                                 <span><i class="far fa-heart me-2" style="color: #ffff;"></i></span>
                             {% endif %}
-                            <!-- The number of likes goes before the closing strong tag -->
+                            <!-- The number of build likes -->
                             <span class="fs-4 my-auto"> {{ build.number_of_likes }}</span>
                             <!-- Ability for a user to save the build -->
                             {% if user.is_authenticated %}
                                 <form class="d-inline" action="{% url 'build_save' build.slug %}" method="POST">
                                     {% csrf_token %}
                                     {% if saved %}
-                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like ms-3"><i class="fa-solid fa-bookmark" style="color: #ffff;"></i></button>
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like ms-1"><i class="fa-solid fa-bookmark" style="color: #ffff;"></i></button>
                                     {% else %}
-                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like ms-3"><i class="fa-regular fa-bookmark" style="color: #ffff;"></i></button>
+                                    <button type="submit" name="userbuild_id" value="{{build.slug}}" class="btn-like ms-1"><i class="fa-regular fa-bookmark" style="color: #ffff;"></i></button>
                                     {% endif %}
                                 </form>
                             {% else %}

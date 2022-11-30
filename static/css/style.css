@@ -150,16 +150,16 @@ h3 {
     background-color: #191919;
 }
 
-.footer-container ul i {
+.footer-container a i {
     font-size: 2.75rem;
 }
 
-.footer-container ul a {
+.footer-container a i {
     color: #ffff;
     transition: .2s ease-in-out color;
 }
 
-.footer-container ul a:hover {
+.footer-container a i:hover {
     color: #d383f8;
 }
 
@@ -226,7 +226,23 @@ h3 {
 }
 
 .user-page label {
+    opacity: .7;
+}
+
+label[for=id_login] {
     display: none;
+}
+
+label[for=id_password] {
+    display: none;
+}
+
+.signup-page label {
+    display: none;
+}
+
+.requiredField {
+    margin-bottom: 0.25rem;
 }
 
 .user-page p {

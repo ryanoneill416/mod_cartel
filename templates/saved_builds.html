@@ -18,7 +18,7 @@
 </div>
 
 <!-- Featured Description w/ Call-to-Action -->
-<section class="pt-3 pb-0 text-center container">
+<div class="pt-3 pb-0 text-center container">
     <div class="row pb-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
             <p class="lead muted-text mb-3">
@@ -40,9 +40,9 @@
         <!-- Removes button functionality and serves as an indicator as to what was selected by user -->
         <a href="{% url 'trending_builds' %}" class="btn btn-filter">Trending</a>
         <a href="{% url 'showcase' %}" class="btn btn-filter mx-2">All Builds</a>
-        <button type="disabled" class="btn-filter-selected btn-filter-bottom">Saved Builds</button>
+        <button class="btn-filter-selected btn-filter-bottom">Saved Builds</button>
     </div>
-</section>
+</div>
 
 {% if user.is_authenticated %}
 <!-- Card containing build identifiers and showcase image to allow member viewing of saved builds -->
