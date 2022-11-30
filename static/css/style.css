@@ -380,7 +380,7 @@ label[for=id_password] {
 }
 
 .build-card {
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }

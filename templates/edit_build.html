@@ -11,8 +11,7 @@
                 <div class="col-md-10 mt-2 mx-auto text-center">
                     <!-- Form allowing updating/ amending of current posted build -->
                     <form method="POST" enctype="multipart/form-data" class="add_build_form darkg-bg px-5 pt-3 pb-4 user-border">
-                        <h3 class="mt-3">Update your build</h3>
-                        <p class="mb-4 muted-text">Show everyone the current state of your build</p>
+                        <h3 class="my-3">Update your build</h3>
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button class="btn btn-user" type="submit" value="Save">Update Build</button>
