@@ -85,3 +85,24 @@ All python code passes pep8 validation with no errors, you can see each result b
 
 <img src="docs/testing_images/lighthouse-1.png">
 <img src="docs/testing_images/lighthouse-2.png">
+
+<h2 id="console-results">Console Results</h2>
+
+<h3>There are no open errors evident in the console.</h3>
+
+<img src="docs/testing_images/console-results.png">
+
+<h2 id="bugs">Bugs / Issues</h2>
+
+<h3>Image Rendering</h3>
+
+- It has made it to my attention that image rendering in the application is a bug that requires amending.
+- The build_image field of the Build model will display the image in which the user uploads, however this is never guaranteed to be a minute and responsive .webp file so this has lead to large contentful paint being affected.
+- This came to my attention late in the project cycle and so is of top priority as I continue to update and improve this application after completion of my studies.
+
+<h3>Image Resizing</h3>
+
+- Due to the implementation of a 100% width carousel and hero image on every page of the application, image resizing is utilised and this impacts the lighthouse scores as much as the previous known bug.
+- To amend this I will be required to either rearrange the format of the applications stlying or use seperate images for differnet device width parameters.
+- Another solution would be to build a dedicated mobile app for the application.
+- As this was noted towards the later stage of development, this issue was not remedied and will be prioritised in further development of the application.
