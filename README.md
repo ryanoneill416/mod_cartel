@@ -249,7 +249,7 @@ Showcase (Mobile):
    Used to validate all HTML code.
 - [W3C - CSS](https://jigsaw.w3.org/css-validator/)<br>
    Used to validate all CSS code.
-- [PEP8](http://pep8online.com/)<br>
+- [CI PEP8 Testing](https://pep8ci.herokuapp.com/)<br>
    Used to validate all Python code.
 - [Google Fonts](https://fonts.google.com/)<br>
    Used to provide the fonts used in application styling.
