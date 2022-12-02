@@ -106,3 +106,10 @@ All python code passes pep8 validation with no errors, you can see each result b
 - To amend this I will be required to either rearrange the format of the applications stlying or use seperate images for differnet device width parameters.
 - Another solution would be to build a dedicated mobile app for the application.
 - As this was noted towards the later stage of development, this issue was not remedied and will be prioritised in further development of the application.
+
+<h3>Cacheing Policy</h3>
+
+- Application cacheing is something I need to spend time expanding my knowledge on.
+- It will render the application more efficiently and also improve my lighthouse score.
+
+<a href="#contents">Back to Top</a>

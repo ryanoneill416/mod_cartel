@@ -38,11 +38,13 @@ This is my fourth portfolio project as part of my Full-Stack Software Developmen
 
 <a href="https://mod-cartel.herokuapp.com/" target="_blank"><h2>Check it out for yourself here!</h2></a><br><br>
 
+<img src="docs/readme_images/responsiveness.png">
+
 <h1 id="user-experience">User Experience Design</h1>
 
 <h2 id="user-stories">User Stories</h2>
 
-* As an unauthenticated user, I can:
+As an unauthenticated user, I can:
 
 - Navigate around the application and efficiently view all application content in a pleasant manner.
 - Use the call-to-action on the homepage or the navigation link to become a member.
@@ -52,7 +54,7 @@ This is my fourth portfolio project as part of my Full-Stack Software Developmen
 - I can view all comments made on a specific build.
 - I can use the footer to join the community social media pages and the secondary navigation links.
 
-* As an authenticated user, I can:
+As an authenticated user, I can:
 
 - Perform all of the same tasks that an unauthenticated user can.
 - I can quickly post a new build by the call-to-action on the home page.
@@ -65,7 +67,7 @@ This is my fourth portfolio project as part of my Full-Stack Software Developmen
 - I can edit existing builds to ensure they are up to date with reality.
 - I can delete builds that I no longer want to showcase.
 
-* As a superuser / staff member, I can:
+As a superuser / staff member, I can:
 
 - Perform all of the previously mentioned tasks above.
 - I can delete any comments that have been made in the application itself.
@@ -121,23 +123,13 @@ Issues were used to create User Stories that were deemed one of the following: N
 
 <h2 id="wireframes">Wireframes</h2>
 
-Home (Desktop):
+<a href="https://github.com/ryanoneill416/mod_cartel/blob/main/docs/wireframes/Desktop%20Home.png" target="_blank">Home Page Wireframe (Desktop)</a>
 
-![Home Desktop Wireframe](docs/wireframes/Desktop%20Home.png)
+<a href="https://github.com/ryanoneill416/mod_cartel/blob/main/docs/wireframes/Desktop%20Showcase.png" target="_blank">Showcase Page Wireframe (Desktop)</a>
 
-Showcase (Desktop):
+<a href="https://github.com/ryanoneill416/mod_cartel/blob/main/docs/wireframes/Mobile%20Home.png" target="_blank">Home Page Wireframe (Mobile)</a>
 
-![Showcase Desktop Wireframe](docs/wireframes/Desktop%20Showcase.png)
-
-Home (Mobile):
-
-![Home Mobile Wireframe](docs/wireframes/Mobile%20Home.png)
-
-Showcase (Mobile):
-
-![Showcase Mobile Wireframe](docs/wireframes/Mobile%20Showcase.png)
-
-<a href="#top">Back to Table of Contents</a>
+<a href="https://github.com/ryanoneill416/mod_cartel/blob/main/docs/wireframes/Mobile%20Showcase.png" target="_blank">Showcase Page Wireframe (Mobile)</a>
 
 <h1 id="#features">Features</h1>
 
@@ -268,3 +260,53 @@ Showcase (Mobile):
 
 View the results of automated testing, code validation and others [here](TESTING.md).
 
+<h1 id="deployment">Deployment</h1>
+
+<h2>Heroku's Hosting Service</h2>
+
+1. Log in or create an account at [Heroku](https://id.heroku.com).
+2. On the homepage you select the 'New' button and then select 'Create New App' from the drop-down.
+3. Give your app a unique name and choose your relevant region.
+4. In the 'Settings' tab of your app select 'Reveal Config Vars'.
+5. Add a value for 'SECRET_KEY' connecting to your django environment.
+6. Add a value for 'DATABASE_URL' connecting to your postgreSQL database.
+7. Add a value for 'ClOUDINARY_URL' connecting to cloudinary's cloud hosting service for media.
+8. Proceed down to the 'Buildpack' section and select 'Add buildpack' before choosing Python and 'Save Changes'.
+9. Back at the top of the page select the 'Deploy' tab.
+10. Select GitHub as preferred deployment method, confirm connecting to Github if not automatic.
+11. Connect to your relevant repository on GitHub.
+12. You can now select either 'Automatic Deployment' for deployment on every push to GiHub or 'Manual Deployment' for only when you press this button.
+
+<h2>Final Deployment</h2>
+
+1. Create a runtime.txt `python-3.8.13`.
+2. Ensure a procfile is created with the following `web: gunicorn projectnamehere.wsgi`.
+3. Ensure DEBUG = False in settings.py.
+
+<h2>To Clone</h2>
+You can clone this project by executing the following:
+
+1. Open this project on GitHub [here](https://github.com/ryanoneill416/mod_cartel).
+2. You will be provided with three options to choose from, HTTPS, SSH or GitHub CLI, click clipboard in order to copy.
+3. Once selected, the forked project will be in your repositories.
+4. Open up a new terminal.
+5. Adjust the current directory to be the location you wish the cloned directory to be.
+6. Type 'git clone' and paste the URL copied above in step 2.
+7. Hit 'Enter' and the project will be successfully cloned.
+
+<h2>To Fork</h2>
+
+1. Open this project on GitHub [here](https://github.com/ryanoneill416/mod_cartel).
+2. The fork button is found at the top of the page.
+3. The forked project will be in your repositories.
+
+<a>Back to Table of Contents</a>
+
+<h1 id="credits">Credits</h1>
+
+- All images used in the application are from both <a href="https://unsplash.com/">Unsplash</a> and <a href="https://www.pexels.com/">Pexels</a>.
+- I learned how to test a required image field on GitHub <a href="https://gist.github.com/drillbits/5432699">here</a>.
+- The following were used as reference and research tools during development:
+   - [W3Schools - Python](https://www.w3schools.com/python/)
+   - [Stack Overflow](https://stackoverflow.com/)
+- Shoutout to my mentor [Adegbenga Adeye](https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/) for his guidance on my approach to both design and implementation.
