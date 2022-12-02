@@ -79,7 +79,7 @@ As a superuser / staff member, I can:
 
 <h2 id="agile-methodology">Agile Methodology</h2>
 
-Agile methodology was used in planning the development of Mod Cartel. This was done through a project kanban board embodying a prioritisation model which can be found <a href="https://github.com/users/ryanoneill416/projects/4/views/1">Mod Cartel User Stories</a>
+Agile methodology was used in planning the development of Mod Cartel. This was done through a project kanban board embodying a prioritisation model which can be found <a href="https://github.com/users/ryanoneill416/projects/5" target="_blank">Mod Cartel User Stories</a>
 
 Issues were used to create User Stories that were deemed one of the following: Needs to have, Should have, Could have. Each User Story had a clear title and action.
 
