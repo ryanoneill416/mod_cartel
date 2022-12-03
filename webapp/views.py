@@ -270,3 +270,11 @@ def delete_comment(request, comment_id):
     messages.success(request, 'Comment deleted successfully')
     return redirect(reverse(
         'build_detail', args=[comment.build.slug]))
+
+
+def error_404_view(request, exception):
+    """
+    Displays 404.html path
+    """
+
+    return render(request, '404.html')

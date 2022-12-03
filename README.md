@@ -309,4 +309,4 @@ You can clone this project by executing the following:
 - The following were used as reference and research tools during development:
    - [W3Schools - Python](https://www.w3schools.com/python/)
    - [Stack Overflow](https://stackoverflow.com/)
-- Shoutout to my mentor [Adegbenga Adeye](https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/) for his guidance on my approach to both design and implementation.
+- Shoutout to my mentor [Adegbenga Adeye](https://www.linkedin.com/in/adegbenga-adeye-psm-i-14003635/) for his guidance on my approach to both design and implementation :)
